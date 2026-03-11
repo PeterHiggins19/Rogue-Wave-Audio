@@ -1,0 +1,946 @@
+# Entropix Regimes Expansion Document
+
+## Document Metadata
+- **Title**: Entropy-Balanced Regime Augmented Adaptive Predictive Engine (Entropix) - Full Regimes Expansion with Formulas, Equations, and Methodologies
+- **Author**: Peter Higgins (Original Concept); Grok 4, xAI (Expansion and Derivation)
+- **Version**: 1.2
+- **Date**: January 7, 2026
+- **Classification**: Internal R&D - Proprietary
+- **Objective**: Provide a complete expansion of all 144 regimes, including tailored formulas, equations, and methodologies. All content is derived traceably from regime attributes (Scale, Phase, EntropyBand, Criticality, EntropyProduction). General templates are defined per Phase and modulated by other attributes for efficiency and traceability. Output is strictly text-based (ASCII) for archival integrity, with no binary elements, images, or non-text visuals.
+
+## Introduction and Traceability Notes
+This expansion builds on the core Entropix architecture, where each regime is a containerized solver unit. Methodologies are physics-inspired and adapted to regime characteristics:
+- **Scale Influence**: Planetary/Civilizational → Macroscopic dynamics (e.g., gravitational/orbital); Macro/Meso → Continuum mechanics; Micro/SubMicro → Quantum/statistical.
+- **Phase Influence**: Determines core model (e.g., Stable → Harmonic; Critical → Chaotic).
+- **EntropyBand Influence**: Adds stochastic elements (higher bands → more noise/variability).
+- **Criticality Modulation**: Scales instability/sensitivity (e.g., higher criticality → stronger non-linearity).
+- **EntropyProduction Modulation**: Damps or amplifies energy dissipation terms.
+
+Traceability:
+- Equations are derived from standard physics/mathematics sources (e.g., harmonic oscillator from classical mechanics; Lorenz from chaos theory; referenced inline).
+- Parameters are directly computed from regime data (e.g., omega = 1 + Criticality * EntropyProduction).
+- Methodologies include solver steps, initial conditions, and output interpretation for reproducibility.
+- All derivations assume input_data as a state vector (e.g., [x0, v0] for dynamics); output is a predicted state or statistic (e.g., mean trajectory).
+- Fault tolerance: If integration fails, fallback to linear approximation: output = input * (1 - Criticality) * exp(-EntropyProduction).
+
+General Solver Framework (Pseudocode for Traceability):
+```
+def solve_regime(input_data, regime_params):
+    # Step 1: Extract params (Criticality c, EntropyProduction e, etc.)
+    # Step 2: Set initial conditions from input_data
+    # Step 3: Define ODE/PDE based on Phase
+    # Step 4: Modulate with c and e (e.g., add noise ~ e)
+    # Step 5: Integrate over t_span (default [0, 50])
+    # Step 6: Compute output statistic (e.g., mean, std)
+    # Step 7: Apply entropy damping: output *= exp(-e / scale_factor)
+```
+
+## Phase-Based Methodology Templates
+To avoid redundancy, templates are defined per Phase. Each regime uses its template with parametrized values. Scales add minor adjustments (e.g., gravity constant for Planetary).
+
+1. **Stable Phase Template**
+   - **Methodology**: Models predictable, oscillatory behavior using damped harmonic oscillator. Suitable for low-criticality systems. Steps: Initialize with input as position/velocity; integrate ODE; output average position damped by entropy.
+   - **Equations** (Derived from Newton's laws, classical mechanics):
+     - d²x/dt² + 2*zeta*omega*dx/dt + omega²*x = 0  (zeta = damping = Criticality/2; omega = frequency = 1 + EntropyProduction * (1 - Criticality))
+     - Add Gaussian noise ~ N(0, EntropyBand_factor) where Divergent=0.1*e, High=0.05*e, Moderate=0.01*e, Low=0.001*e.
+   - **Traceability**: Standard SHO equation (ref: Goldstein Classical Mechanics). Params ensure stability (low zeta).
+
+2. **Metastable Phase Template**
+   - **Methodology**: Logistic growth with potential bifurcation. For systems near tipping points. Steps: Normalize input; integrate; output equilibrium state.
+   - **Equations** (Derived from population dynamics, Verhulst model):
+     - dy/dt = r * y * (1 - y/K)  (r = growth = 2 + Criticality * EntropyProduction; K = carrying capacity = 10 / (1 - Criticality))
+     - Stochastic term: + sigma * dW/dt (sigma = EntropyBand_factor * e).
+   - **Traceability**: Logistic map extended to ODE (ref: May 1976 Nature). Criticality increases r towards chaos.
+
+3. **Critical/Supercritical Phase Template**
+   - **Methodology**: Chaotic attractor modeling for sensitive dependence. Steps: Use 3D state; integrate Lorenz; output std deviation as unpredictability measure.
+   - **Equations** (Lorenz system, chaos theory):
+     - dx/dt = sigma*(y - x); dy/dt = x*(rho - z) - y; dz/dt = x*y - beta*z
+     - sigma = 10 * (1 + Criticality); rho = 28 * EntropyProduction; beta = 8/3 * (1 - Criticality)
+     - Noise: Add to each eq ~ EntropyBand_factor.
+   - **Traceability**: Original Lorenz 1963 (ref: Atmospheric convection). Modulated for criticality (higher rho → more chaos).
+
+4. **Fragmenting Phase Template**
+   - **Methodology**: Fragmentation/decay with branching. For breaking systems. Steps: Simulate exponential split; output fragment count or size distribution.
+   - **Equations** (Derived from fracture mechanics/percolation):
+     - dN/dt = lambda * N  (lambda = fragmentation rate = Criticality * EntropyProduction; N = fragments)
+     - Power-law distribution: P(s) ~ s^(-tau) (tau = 2 + Criticality)
+     - Stochastic breaks ~ Poisson(e).
+   - **Traceability**: Percolation theory (ref: Stauffer 1994). Entropy drives branching.
+
+5. **Collapsed Phase Template**
+   - **Methodology**: Rapid decay to equilibrium. For post-critical collapse. Steps: Integrate decay; output residual energy.
+   - **Equations** (Exponential decay, thermodynamics):
+     - dy/dt = -gamma * y  (gamma = decay = EntropyProduction * Criticality)
+     - Final y = y0 * exp(-gamma * t) + noise ~ EntropyBand_factor.
+   - **Traceability**: First-order kinetics (ref: Chemical physics). High criticality accelerates collapse.
+
+## Expanded Regimes List
+Each regime entry includes: ID, Key Params, Template Used, Parametrized Equations, Methodology Notes. Listed in order of decreasing EntropyProduction for traceability.
+
+1. ID: Physics_Planetary_Stable_DivergentEntropy_Regulated  
+   Params: Criticality=0.094, EntropyProduction=7.932, Scale=Planetary, Phase=Stable, EntropyBand=Divergent  
+   Template: Stable  
+   Equations: d²x/dt² + 2*(0.094/2)*omega*dx/dt + omega²*x = 0; omega=1+7.932*(1-0.094); noise~0.1*7.932  
+   Notes: Planetary adjustment: Add G=6.674e-11 in omega for gravity. Integrate for orbital stability; output mean radius.
+
+2. ID: Physics_Civilizational_Stable_DivergentEntropy_Regulated  
+   Params: Criticality=0.178, EntropyProduction=7.744, Scale=Civilizational, Phase=Stable, EntropyBand=Divergent  
+   Template: Stable  
+   Equations: d²x/dt² + 2*(0.178/2)*omega*dx/dt + omega²*x = 0; omega=1+7.744*(1-0.178); noise~0.1*7.744  
+   Notes: Civilizational: Model as social harmony; output avg cohesion metric.
+
+3. ID: Physics_Planetary_Metastable_DivergentEntropy_Regulated  
+   Params: Criticality=0.3, EntropyProduction=7.731, Scale=Planetary, Phase=Metastable, EntropyBand=Divergent  
+   Template: Metastable  
+   Equations: dy/dt = (2+0.3*7.731)*y*(1-y/ (10/(1-0.3))); sigma=0.1*7.731  
+   Notes: Planetary tipping (e.g., climate); output equilibrium temp.
+
+4. ID: Physics_Micro_Collapsed_DivergentEntropy_Regulated  
+   Params: Criticality=0.996, EntropyProduction=7.381, Scale=Micro, Phase=Collapsed, EntropyBand=Divergent  
+   Template: Collapsed  
+   Equations: dy/dt = - (7.381*0.996) * y; y_final = y0 * exp(-gamma*t) + noise~0.1*7.381  
+   Notes: Micro collapse (e.g., wavefunction); output ground state energy.
+
+5. ID: Physics_Meso_Stable_DivergentEntropy_Regulated  
+   Params: Criticality=0.077, EntropyProduction=7.372, Scale=Meso, Phase=Stable, EntropyBand=Divergent  
+   Template: Stable  
+   Equations: d²x/dt² + 2*(0.077/2)*omega*dx/dt + omega²*x = 0; omega=1+7.372*(1-0.077); noise~0.1*7.372  
+   Notes: Meso scale continuum; output avg displacement.
+
+6. ID: Physics_Civilizational_Metastable_DivergentEntropy_Regulated  
+   Params: Criticality=0.43, EntropyProduction=7.208, Scale=Civilizational, Phase=Metastable, EntropyBand=Divergent  
+   Template: Metastable  
+   Equations: dy/dt = (2+0.43*7.208)*y*(1-y/ (10/(1-0.43))); sigma=0.1*7.208  
+   Notes: Societal metastable; output population stability.
+
+7. ID: Physics_Civilizational_Critical_DivergentEntropy_Regulated  
+   Params: Criticality=0.541, EntropyProduction=7.169, Scale=Civilizational, Phase=Critical, EntropyBand=Divergent  
+   Template: Critical/Supercritical  
+   Equations: dx/dt=10*(1+0.541)*(y-x); dy/dt=x*(28*7.169 - z)-y; dz/dt=x*y - (8/3)*(1-0.541)*z; noise~0.1*7.169  
+   Notes: Critical societal tipping; output chaos metric (std).
+
+8. ID: Physics_Meso_Critical_DivergentEntropy_Regulated  
+   Params: Criticality=0.776, EntropyProduction=7.141, Scale=Meso, Phase=Critical, EntropyBand=Divergent  
+   Template: Critical/Supercritical  
+   Equations: dx/dt=10*(1+0.776)*(y-x); dy/dt=x*(28*7.141 - z)-y; dz/dt=x*y - (8/3)*(1-0.776)*z; noise~0.1*7.141  
+   Notes: Meso critical (e.g., phase transition); output fluctuation std.
+
+9. ID: Physics_Civilizational_Collapsed_DivergentEntropy_Regulated  
+   Params: Criticality=0.993, EntropyProduction=6.289, Scale=Civilizational, Phase=Collapsed, EntropyBand=Divergent  
+   Template: Collapsed  
+   Equations: dy/dt = - (6.289*0.993) * y; y_final = y0 * exp(-gamma*t) + noise~0.1*6.289  
+   Notes: Civilizational collapse; output residual resources.
+
+10. ID: Physics_Macro_Metastable_DivergentEntropy_Regulated  
+    Params: Criticality=0.326, EntropyProduction=6.157, Scale=Macro, Phase=Metastable, EntropyBand=Divergent  
+    Template: Metastable  
+    Equations: dy/dt = (2+0.326*6.157)*y*(1-y/ (10/(1-0.326))); sigma=0.1*6.157  
+    Notes: Macro metastable (e.g., economic); output growth equilibrium.
+
+11. ID: Physics_SubMicro_Stable_DivergentEntropy_Regulated  
+    Params: Criticality=0.184, EntropyProduction=5.984, Scale=SubMicro, Phase=Stable, EntropyBand=Divergent  
+    Template: Stable  
+    Equations: d²x/dt² + 2*(0.184/2)*omega*dx/dt + omega²*x = 0; omega=1+5.984*(1-0.184); noise~0.1*5.984  
+    Notes: SubMicro quantum harmonic; output energy level.
+
+12. ID: Physics_Macro_Collapsed_DivergentEntropy_Regulated  
+    Params: Criticality=0.996, EntropyProduction=5.91, Scale=Macro, Phase=Collapsed, EntropyBand=Divergent  
+    Template: Collapsed  
+    Equations: dy/dt = - (5.91*0.996) * y; y_final = y0 * exp(-gamma*t) + noise~0.1*5.91  
+    Notes: Macro collapse (e.g., structural); output final density.
+
+13. ID: Physics_Micro_Metastable_DivergentEntropy_Regulated  
+    Params: Criticality=0.305, EntropyProduction=5.862, Scale=Micro, Phase=Metastable, EntropyBand=Divergent  
+    Template: Metastable  
+    Equations: dy/dt = (2+0.305*5.862)*y*(1-y/ (10/(1-0.305))); sigma=0.1*5.862  
+    Notes: Micro metastable (e.g., particle); output quasi-stable state.
+
+14. ID: Physics_Meso_Collapsed_DivergentEntropy_Regulated  
+    Params: Criticality=0.994, EntropyProduction=5.815, Scale=Meso, Phase=Collapsed, EntropyBand=Divergent  
+    Template: Collapsed  
+    Equations: dy/dt = - (5.815*0.994) * y; y_final = y0 * exp(-gamma*t) + noise~0.1*5.815  
+    Notes: Meso collapse (e.g., fluid); output viscosity residual.
+
+15. ID: Physics_SubMicro_Fragmenting_DivergentEntropy_Regulated  
+    Params: Criticality=0.974, EntropyProduction=5.635, Scale=SubMicro, Phase=Fragmenting, EntropyBand=Divergent  
+    Template: Fragmenting  
+    Equations: dN/dt = (0.974*5.635)*N; P(s)~s^(- (2+0.974)); Poisson breaks~5.635  
+    Notes: SubMicro fragmentation (e.g., atomic); output fragment distribution mean.
+
+16. ID: Physics_Micro_Critical_DivergentEntropy_Regulated  
+    Params: Criticality=0.709, EntropyProduction=5.577, Scale=Micro, Phase=Critical, EntropyBand=Divergent  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.709)*(y-x); dy/dt=x*(28*5.577 - z)-y; dz/dt=x*y - (8/3)*(1-0.709)*z; noise~0.1*5.577  
+    Notes: Micro critical (e.g., threshold); output sensitivity.
+
+17. ID: Physics_Meso_Supercritical_DivergentEntropy_Regulated  
+    Params: Criticality=0.828, EntropyProduction=5.533, Scale=Meso, Phase=Supercritical, EntropyBand=Divergent  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.828)*(y-x); dy/dt=x*(28*5.533 - z)-y; dz/dt=x*y - (8/3)*(1-0.828)*z; noise~0.1*5.533  
+    Notes: Meso supercritical (e.g., fluid); output turbulent measure.
+
+18. ID: Physics_Meso_Metastable_DivergentEntropy_Regulated  
+    Params: Criticality=0.367, EntropyProduction=5.532, Scale=Meso, Phase=Metastable, EntropyBand=Divergent  
+    Template: Metastable  
+    Equations: dy/dt = (2+0.367*5.532)*y*(1-y/ (10/(1-0.367))); sigma=0.1*5.532  
+    Notes: Meso metastable; output phase boundary.
+
+19. ID: Physics_Micro_Stable_DivergentEntropy_Regulated  
+    Params: Criticality=0.083, EntropyProduction=5.525, Scale=Micro, Phase=Stable, EntropyBand=Divergent  
+    Template: Stable  
+    Equations: d²x/dt² + 2*(0.083/2)*omega*dx/dt + omega²*x = 0; omega=1+5.525*(1-0.083); noise~0.1*5.525  
+    Notes: Micro stable (e.g., vibration); output freq.
+
+20. ID: Physics_Micro_Supercritical_DivergentEntropy_Regulated  
+    Params: Criticality=0.871, EntropyProduction=5.443, Scale=Micro, Phase=Supercritical, EntropyBand=Divergent  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.871)*(y-x); dy/dt=x*(28*5.443 - z)-y; dz/dt=x*y - (8/3)*(1-0.871)*z; noise~0.1*5.443  
+    Notes: Micro supercritical; output quantum fluctuation.
+
+21. ID: Physics_Planetary_Fragmenting_DivergentEntropy_Regulated  
+    Params: Criticality=0.972, EntropyProduction=5.319, Scale=Planetary, Phase=Fragmenting, EntropyBand=Divergent  
+    Template: Fragmenting  
+    Equations: dN/dt = (0.972*5.319)*N; P(s)~s^(- (2+0.972)); Poisson breaks~5.319  
+    Notes: Planetary fragmentation (e.g., asteroid); output debris count.
+
+22. ID: Physics_Planetary_Supercritical_DivergentEntropy_Regulated  
+    Params: Criticality=0.832, EntropyProduction=5.274, Scale=Planetary, Phase=Supercritical, EntropyBand=Divergent  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.832)*(y-x); dy/dt=x*(28*5.274 - z)-y; dz/dt=x*y - (8/3)*(1-0.832)*z; noise~0.1*5.274  
+    Notes: Planetary supercritical (e.g., core); output heat flux.
+
+23. ID: Physics_Planetary_Critical_DivergentEntropy_Regulated  
+    Params: Criticality=0.551, EntropyProduction=5.272, Scale=Planetary, Phase=Critical, EntropyBand=Divergent  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.551)*(y-x); dy/dt=x*(28*5.272 - z)-y; dz/dt=x*y - (8/3)*(1-0.551)*z; noise~0.1*5.272  
+    Notes: Planetary critical (e.g., magnetic field); output polarity switch probability.
+
+24. ID: Physics_Macro_Stable_DivergentEntropy_Regulated  
+    Params: Criticality=0.053, EntropyProduction=5.242, Scale=Macro, Phase=Stable, EntropyBand=Divergent  
+    Template: Stable  
+    Equations: d²x/dt² + 2*(0.053/2)*omega*dx/dt + omega²*x = 0; omega=1+5.242*(1-0.053); noise~0.1*5.242  
+    Notes: Macro stable; output equilibrium position.
+
+25. ID: Physics_Macro_Supercritical_DivergentEntropy_Regulated  
+    Params: Criticality=0.923, EntropyProduction=5.233, Scale=Macro, Phase=Supercritical, EntropyBand=Divergent  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.923)*(y-x); dy/dt=x*(28*5.233 - z)-y; dz/dt=x*y - (8/3)*(1-0.923)*z; noise~0.1*5.233  
+    Notes: Macro supercritical; output flow instability.
+
+26. ID: Physics_Macro_Fragmenting_DivergentEntropy_Regulated  
+    Params: Criticality=0.965, EntropyProduction=5.03, Scale=Macro, Phase=Fragmenting, EntropyBand=Divergent  
+    Template: Fragmenting  
+    Equations: dN/dt = (0.965*5.03)*N; P(s)~s^(- (2+0.965)); Poisson breaks~5.03  
+    Notes: Macro fragmentation; output crack propagation.
+
+27. ID: Physics_Planetary_Collapsed_DivergentEntropy_Regulated  
+    Params: Criticality=0.997, EntropyProduction=4.766, Scale=Planetary, Phase=Collapsed, EntropyBand=Divergent  
+    Template: Collapsed  
+    Equations: dy/dt = - (4.766*0.997) * y; y_final = y0 * exp(-gamma*t) + noise~0.1*4.766  
+    Notes: Planetary collapse (e.g., black hole); output singularity metric.
+
+28. ID: Physics_SubMicro_Metastable_DivergentEntropy_Regulated  
+    Params: Criticality=0.41, EntropyProduction=4.748, Scale=SubMicro, Phase=Metastable, EntropyBand=Divergent  
+    Template: Metastable  
+    Equations: dy/dt = (2+0.41*4.748)*y*(1-y/ (10/(1-0.41))); sigma=0.1*4.748  
+    Notes: SubMicro metastable; output tunneling probability.
+
+29. ID: Physics_SubMicro_Critical_DivergentEntropy_Regulated  
+    Params: Criticality=0.7, EntropyProduction=4.626, Scale=SubMicro, Phase=Critical, EntropyBand=Divergent  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.7)*(y-x); dy/dt=x*(28*4.626 - z)-y; dz/dt=x*y - (8/3)*(1-0.7)*z; noise~0.1*4.626  
+    Notes: SubMicro critical; output phase coherence.
+
+30. ID: Physics_Meso_Fragmenting_DivergentEntropy_Regulated  
+    Params: Criticality=0.955, EntropyProduction=4.601, Scale=Meso, Phase=Fragmenting, EntropyBand=Divergent  
+    Template: Fragmenting  
+    Equations: dN/dt = (0.955*4.601)*N; P(s)~s^(- (2+0.955)); Poisson breaks~4.601  
+    Notes: Meso fragmentation; output cluster size.
+
+31. ID: Physics_SubMicro_Collapsed_DivergentEntropy_Regulated  
+    Params: Criticality=0.999, EntropyProduction=4.202, Scale=SubMicro, Phase=Collapsed, EntropyBand=Divergent  
+    Template: Collapsed  
+    Equations: dy/dt = - (4.202*0.999) * y; y_final = y0 * exp(-gamma*t) + noise~0.1*4.202  
+    Notes: SubMicro collapse; output vacuum state.
+
+32. ID: Physics_Micro_Fragmenting_DivergentEntropy_Regulated  
+    Params: Criticality=0.969, EntropyProduction=4.124, Scale=Micro, Phase=Fragmenting, EntropyBand=Divergent  
+    Template: Fragmenting  
+    Equations: dN/dt = (0.969*4.124)*N; P(s)~s^(- (2+0.969)); Poisson breaks~4.124  
+    Notes: Micro fragmentation; output particle shards.
+
+33. ID: Physics_Macro_Critical_DivergentEntropy_Regulated  
+    Params: Criticality=0.531, EntropyProduction=3.941, Scale=Macro, Phase=Critical, EntropyBand=Divergent  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.531)*(y-x); dy/dt=x*(28*3.941 - z)-y; dz/dt=x*y - (8/3)*(1-0.531)*z; noise~0.1*3.941  
+    Notes: Macro critical; output bifurcation point.
+
+34. ID: Physics_Civilizational_Supercritical_DivergentEntropy_Regulated  
+    Params: Criticality=0.928, EntropyProduction=3.914, Scale=Civilizational, Phase=Supercritical, EntropyBand=Divergent  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.928)*(y-x); dy/dt=x*(28*3.914 - z)-y; dz/dt=x*y - (8/3)*(1-0.928)*z; noise~0.1*3.914  
+    Notes: Civilizational supercritical; output innovation surge.
+
+35. ID: Physics_SubMicro_Supercritical_DivergentEntropy_Regulated  
+    Params: Criticality=0.875, EntropyProduction=3.741, Scale=SubMicro, Phase=Supercritical, EntropyBand=Divergent  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.875)*(y-x); dy/dt=x*(28*3.741 - z)-y; dz/dt=x*y - (8/3)*(1-0.875)*z; noise~0.1*3.741  
+    Notes: SubMicro supercritical; output high-energy state.
+
+36. ID: Physics_Civilizational_Fragmenting_DivergentEntropy_Regulated  
+    Params: Criticality=0.979, EntropyProduction=3.739, Scale=Civilizational, Phase=Fragmenting, EntropyBand=Divergent  
+    Template: Fragmenting  
+    Equations: dN/dt = (0.979*3.739)*N; P(s)~s^(- (2+0.979)); Poisson breaks~3.739  
+    Notes: Civilizational fragmentation; output faction count.
+
+37. ID: Physics_Meso_Stable_HighEntropy_Regulated  
+    Params: Criticality=0.069, EntropyProduction=3.417, Scale=Meso, Phase=Stable, EntropyBand=High  
+    Template: Stable  
+    Equations: d²x/dt² + 2*(0.069/2)*omega*dx/dt + omega²*x = 0; omega=1+3.417*(1-0.069); noise~0.05*3.417  
+    Notes: High entropy adjustment: Increased noise for variability.
+
+38. ID: Physics_Macro_Metastable_HighEntropy_Regulated  
+    Params: Criticality=0.433, EntropyProduction=3.281, Scale=Macro, Phase=Metastable, EntropyBand=High  
+    Template: Metastable  
+    Equations: dy/dt = (2+0.433*3.281)*y*(1-y/ (10/(1-0.433))); sigma=0.05*3.281  
+    Notes: Macro with high entropy; output noisy equilibrium.
+
+39. ID: Physics_Micro_Collapsed_HighEntropy_Regulated  
+    Params: Criticality=0.997, EntropyProduction=3.273, Scale=Micro, Phase=Collapsed, EntropyBand=High  
+    Template: Collapsed  
+    Equations: dy/dt = - (3.273*0.997) * y; y_final = y0 * exp(-gamma*t) + noise~0.05*3.273  
+    Notes: Micro high-entropy collapse; output disordered state.
+
+40. ID: Physics_Macro_Critical_HighEntropy_Regulated  
+    Params: Criticality=0.726, EntropyProduction=3.27, Scale=Macro, Phase=Critical, EntropyBand=High  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.726)*(y-x); dy/dt=x*(28*3.27 - z)-y; dz/dt=x*y - (8/3)*(1-0.726)*z; noise~0.05*3.27  
+    Notes: Macro critical with noise.
+
+41. ID: Physics_SubMicro_Supercritical_HighEntropy_Regulated  
+    Params: Criticality=0.901, EntropyProduction=3.136, Scale=SubMicro, Phase=Supercritical, EntropyBand=High  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.901)*(y-x); dy/dt=x*(28*3.136 - z)-y; dz/dt=x*y - (8/3)*(1-0.901)*z; noise~0.05*3.136  
+    Notes: SubMicro high entropy.
+
+42. ID: Physics_Meso_Critical_HighEntropy_Regulated  
+    Params: Criticality=0.664, EntropyProduction=3.049, Scale=Meso, Phase=Critical, EntropyBand=High  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.664)*(y-x); dy/dt=x*(28*3.049 - z)-y; dz/dt=x*y - (8/3)*(1-0.664)*z; noise~0.05*3.049  
+    Notes: Meso critical.
+
+43. ID: Physics_SubMicro_Stable_HighEntropy_Regulated  
+    Params: Criticality=0.136, EntropyProduction=2.93, Scale=SubMicro, Phase=Stable, EntropyBand=High  
+    Template: Stable  
+    Equations: d²x/dt² + 2*(0.136/2)*omega*dx/dt + omega²*x = 0; omega=1+2.93*(1-0.136); noise~0.05*2.93  
+    Notes: SubMicro stable.
+
+44. ID: Physics_Planetary_Stable_HighEntropy_Regulated  
+    Params: Criticality=0.185, EntropyProduction=2.776, Scale=Planetary, Phase=Stable, EntropyBand=High  
+    Template: Stable  
+    Equations: d²x/dt² + 2*(0.185/2)*omega*dx/dt + omega²*x = 0; omega=1+2.776*(1-0.185); noise~0.05*2.776  
+    Notes: Planetary with G adjustment.
+
+45. ID: Physics_Micro_Fragmenting_HighEntropy_Regulated  
+    Params: Criticality=0.959, EntropyProduction=2.755, Scale=Micro, Phase=Fragmenting, EntropyBand=High  
+    Template: Fragmenting  
+    Equations: dN/dt = (0.959*2.755)*N; P(s)~s^(- (2+0.959)); Poisson breaks~2.755  
+    Notes: Micro high entropy frag.
+
+46. ID: Physics_Micro_Critical_HighEntropy_Regulated  
+    Params: Criticality=0.582, EntropyProduction=2.738, Scale=Micro, Phase=Critical, EntropyBand=High  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.582)*(y-x); dy/dt=x*(28*2.738 - z)-y; dz/dt=x*y - (8/3)*(1-0.582)*z; noise~0.05*2.738  
+    Notes: Micro critical.
+
+47. ID: Physics_Macro_Stable_HighEntropy_Regulated  
+    Params: Criticality=0.122, EntropyProduction=2.638, Scale=Macro, Phase=Stable, EntropyBand=High  
+    Template: Stable  
+    Equations: d²x/dt² + 2*(0.122/2)*omega*dx/dt + omega²*x = 0; omega=1+2.638*(1-0.122); noise~0.05*2.638  
+    Notes: Macro stable.
+
+48. ID: Physics_Civilizational_Metastable_HighEntropy_Regulated  
+    Params: Criticality=0.346, EntropyProduction=2.618, Scale=Civilizational, Phase=Metastable, EntropyBand=High  
+    Template: Metastable  
+    Equations: dy/dt = (2+0.346*2.618)*y*(1-y/ (10/(1-0.346))); sigma=0.05*2.618  
+    Notes: Civilizational metastable.
+
+49. ID: Physics_Micro_Metastable_HighEntropy_Regulated  
+    Params: Criticality=0.4, EntropyProduction=2.575, Scale=Micro, Phase=Metastable, EntropyBand=High  
+    Template: Metastable  
+    Equations: dy/dt = (2+0.4*2.575)*y*(1-y/ (10/(1-0.4))); sigma=0.05*2.575  
+    Notes: Micro metastable.
+
+50. ID: Physics_SubMicro_Fragmenting_HighEntropy_Regulated  
+    Params: Criticality=0.972, EntropyProduction=2.547, Scale=SubMicro, Phase=Fragmenting, EntropyBand=High  
+    Template: Fragmenting  
+    Equations: dN/dt = (0.972*2.547)*N; P(s)~s^(- (2+0.972)); Poisson breaks~2.547  
+    Notes: SubMicro frag.
+
+51. ID: Physics_Planetary_Supercritical_HighEntropy_Regulated  
+    Params: Criticality=0.825, EntropyProduction=2.416, Scale=Planetary, Phase=Supercritical, EntropyBand=High  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.825)*(y-x); dy/dt=x*(28*2.416 - z)-y; dz/dt=x*y - (8/3)*(1-0.825)*z; noise~0.05*2.416  
+    Notes: Planetary supercritical.
+
+52. ID: Physics_Civilizational_Fragmenting_HighEntropy_Regulated  
+    Params: Criticality=0.951, EntropyProduction=2.41, Scale=Civilizational, Phase=Fragmenting, EntropyBand=High  
+    Template: Fragmenting  
+    Equations: dN/dt = (0.951*2.41)*N; P(s)~s^(- (2+0.951)); Poisson breaks~2.41  
+    Notes: Civilizational frag.
+
+53. ID: Physics_SubMicro_Critical_HighEntropy_Regulated  
+    Params: Criticality=0.581, EntropyProduction=2.398, Scale=SubMicro, Phase=Critical, EntropyBand=High  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.581)*(y-x); dy/dt=x*(28*2.398 - z)-y; dz/dt=x*y - (8/3)*(1-0.581)*z; noise~0.05*2.398  
+    Notes: SubMicro critical.
+
+54. ID: Physics_Macro_Fragmenting_HighEntropy_Regulated  
+    Params: Criticality=0.976, EntropyProduction=2.281, Scale=Macro, Phase=Fragmenting, EntropyBand=High  
+    Template: Fragmenting  
+    Equations: dN/dt = (0.976*2.281)*N; P(s)~s^(- (2+0.976)); Poisson breaks~2.281  
+    Notes: Macro frag.
+
+55. ID: Physics_Meso_Metastable_HighEntropy_Regulated  
+    Params: Criticality=0.433, EntropyProduction=2.23, Scale=Meso, Phase=Metastable, EntropyBand=High  
+    Template: Metastable  
+    Equations: dy/dt = (2+0.433*2.23)*y*(1-y/ (10/(1-0.433))); sigma=0.05*2.23  
+    Notes: Meso metastable.
+
+56. ID: Physics_SubMicro_Collapsed_HighEntropy_Regulated  
+    Params: Criticality=0.996, EntropyProduction=2.084, Scale=SubMicro, Phase=Collapsed, EntropyBand=High  
+    Template: Collapsed  
+    Equations: dy/dt = - (2.084*0.996) * y; y_final = y0 * exp(-gamma*t) + noise~0.05*2.084  
+    Notes: SubMicro collapse.
+
+57. ID: Physics_Macro_Supercritical_HighEntropy_Regulated  
+    Params: Criticality=0.857, EntropyProduction=2.077, Scale=Macro, Phase=Supercritical, EntropyBand=High  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.857)*(y-x); dy/dt=x*(28*2.077 - z)-y; dz/dt=x*y - (8/3)*(1-0.857)*z; noise~0.05*2.077  
+    Notes: Macro supercritical.
+
+58. ID: Physics_SubMicro_Metastable_HighEntropy_Regulated  
+    Params: Criticality=0.385, EntropyProduction=2.02, Scale=SubMicro, Phase=Metastable, EntropyBand=High  
+    Template: Metastable  
+    Equations: dy/dt = (2+0.385*2.02)*y*(1-y/ (10/(1-0.385))); sigma=0.05*2.02  
+    Notes: SubMicro metastable.
+
+59. ID: Physics_Meso_Supercritical_HighEntropy_Regulated  
+    Params: Criticality=0.938, EntropyProduction=1.735, Scale=Meso, Phase=Supercritical, EntropyBand=High  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.938)*(y-x); dy/dt=x*(28*1.735 - z)-y; dz/dt=x*y - (8/3)*(1-0.938)*z; noise~0.05*1.735  
+    Notes: Meso supercritical.
+
+60. ID: Physics_Civilizational_Collapsed_HighEntropy_Regulated  
+    Params: Criticality=0.994, EntropyProduction=1.732, Scale=Civilizational, Phase=Collapsed, EntropyBand=High  
+    Template: Collapsed  
+    Equations: dy/dt = - (1.732*0.994) * y; y_final = y0 * exp(-gamma*t) + noise~0.05*1.732  
+    Notes: Civilizational collapse.
+
+61. ID: Physics_Macro_Collapsed_HighEntropy_Regulated  
+    Params: Criticality=0.99, EntropyProduction=1.641, Scale=Macro, Phase=Collapsed, EntropyBand=High  
+    Template: Collapsed  
+    Equations: dy/dt = - (1.641*0.99) * y; y_final = y0 * exp(-gamma*t) + noise~0.05*1.641  
+    Notes: Macro collapse.
+
+62. ID: Physics_Meso_Fragmenting_HighEntropy_Regulated  
+    Params: Criticality=0.958, EntropyProduction=1.639, Scale=Meso, Phase=Fragmenting, EntropyBand=High  
+    Template: Fragmenting  
+    Equations: dN/dt = (0.958*1.639)*N; P(s)~s^(- (2+0.958)); Poisson breaks~1.639  
+    Notes: Meso frag.
+
+63. ID: Physics_Planetary_Critical_HighEntropy_Regulated  
+    Params: Criticality=0.745, EntropyProduction=1.632, Scale=Planetary, Phase=Critical, EntropyBand=High  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.745)*(y-x); dy/dt=x*(28*1.632 - z)-y; dz/dt=x*y - (8/3)*(1-0.745)*z; noise~0.05*1.632  
+    Notes: Planetary critical.
+
+64. ID: Physics_Planetary_Fragmenting_HighEntropy_Regulated  
+    Params: Criticality=0.965, EntropyProduction=1.628, Scale=Planetary, Phase=Fragmenting, EntropyBand=High  
+    Template: Fragmenting  
+    Equations: dN/dt = (0.965*1.628)*N; P(s)~s^(- (2+0.965)); Poisson breaks~1.628  
+    Notes: Planetary frag.
+
+65. ID: Physics_Planetary_Metastable_HighEntropy_Regulated  
+    Params: Criticality=0.256, EntropyProduction=1.588, Scale=Planetary, Phase=Metastable, EntropyBand=High  
+    Template: Metastable  
+    Equations: dy/dt = (2+0.256*1.588)*y*(1-y/ (10/(1-0.256))); sigma=0.05*1.588  
+    Notes: Planetary metastable.
+
+66. ID: Physics_Civilizational_Stable_HighEntropy_Regulated  
+    Params: Criticality=0.121, EntropyProduction=1.574, Scale=Civilizational, Phase=Stable, EntropyBand=High  
+    Template: Stable  
+    Equations: d²x/dt² + 2*(0.121/2)*omega*dx/dt + omega²*x = 0; omega=1+1.574*(1-0.121); noise~0.05*1.574  
+    Notes: Civilizational stable.
+
+67. ID: Physics_Civilizational_Critical_HighEntropy_Regulated  
+    Params: Criticality=0.777, EntropyProduction=1.549, Scale=Civilizational, Phase=Critical, EntropyBand=High  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.777)*(y-x); dy/dt=x*(28*1.549 - z)-y; dz/dt=x*y - (8/3)*(1-0.777)*z; noise~0.05*1.549  
+    Notes: Civilizational critical.
+
+68. ID: Physics_Meso_Collapsed_HighEntropy_Regulated  
+    Params: Criticality=0.991, EntropyProduction=1.492, Scale=Meso, Phase=Collapsed, EntropyBand=High  
+    Template: Collapsed  
+    Equations: dy/dt = - (1.492*0.991) * y; y_final = y0 * exp(-gamma*t) + noise~0.05*1.492  
+    Notes: Meso collapse.
+
+69. ID: Physics_Planetary_Collapsed_HighEntropy_Regulated  
+    Params: Criticality=0.997, EntropyProduction=1.471, Scale=Planetary, Phase=Collapsed, EntropyBand=High  
+    Template: Collapsed  
+    Equations: dy/dt = - (1.471*0.997) * y; y_final = y0 * exp(-gamma*t) + noise~0.05*1.471  
+    Notes: Planetary collapse.
+
+70. ID: Physics_Micro_Stable_HighEntropy_Regulated  
+    Params: Criticality=0.138, EntropyProduction=1.355, Scale=Micro, Phase=Stable, EntropyBand=High  
+    Template: Stable  
+    Equations: d²x/dt² + 2*(0.138/2)*omega*dx/dt + omega²*x = 0; omega=1+1.355*(1-0.138); noise~0.05*1.355  
+    Notes: Micro stable.
+
+71. ID: Physics_Civilizational_Supercritical_HighEntropy_Regulated  
+    Params: Criticality=0.917, EntropyProduction=1.286, Scale=Civilizational, Phase=Supercritical, EntropyBand=High  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.917)*(y-x); dy/dt=x*(28*1.286 - z)-y; dz/dt=x*y - (8/3)*(1-0.917)*z; noise~0.05*1.286  
+    Notes: Civilizational supercritical.
+
+72. ID: Physics_Micro_Supercritical_HighEntropy_Regulated  
+    Params: Criticality=0.9, EntropyProduction=1.204, Scale=Micro, Phase=Supercritical, EntropyBand=High  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.9)*(y-x); dy/dt=x*(28*1.204 - z)-y; dz/dt=x*y - (8/3)*(1-0.9)*z; noise~0.05*1.204  
+    Notes: Micro supercritical.
+
+73. ID: Physics_Micro_Collapsed_ModerateEntropy_Regulated  
+    Params: Criticality=1, EntropyProduction=1.195, Scale=Micro, Phase=Collapsed, EntropyBand=Moderate  
+    Template: Collapsed  
+    Equations: dy/dt = - (1.195*1) * y; y_final = y0 * exp(-gamma*t) + noise~0.01*1.195  
+    Notes: Moderate entropy: Reduced noise.
+
+74. ID: Physics_SubMicro_Metastable_ModerateEntropy_Regulated  
+    Params: Criticality=0.21, EntropyProduction=1.083, Scale=SubMicro, Phase=Metastable, EntropyBand=Moderate  
+    Template: Metastable  
+    Equations: dy/dt = (2+0.21*1.083)*y*(1-y/ (10/(1-0.21))); sigma=0.01*1.083  
+    Notes: SubMicro moderate.
+
+75. ID: Physics_Civilizational_Metastable_ModerateEntropy_Regulated  
+    Params: Criticality=0.265, EntropyProduction=1.05, Scale=Civilizational, Phase=Metastable, EntropyBand=Moderate  
+    Template: Metastable  
+    Equations: dy/dt = (2+0.265*1.05)*y*(1-y/ (10/(1-0.265))); sigma=0.01*1.05  
+    Notes: Civilizational moderate.
+
+76. ID: Physics_Micro_Supercritical_ModerateEntropy_Regulated  
+    Params: Criticality=0.852, EntropyProduction=1.034, Scale=Micro, Phase=Supercritical, EntropyBand=Moderate  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.852)*(y-x); dy/dt=x*(28*1.034 - z)-y; dz/dt=x*y - (8/3)*(1-0.852)*z; noise~0.01*1.034  
+    Notes: Micro moderate.
+
+77. ID: Physics_Meso_Metastable_ModerateEntropy_Regulated  
+    Params: Criticality=0.29, EntropyProduction=1.015, Scale=Meso, Phase=Metastable, EntropyBand=Moderate  
+    Template: Metastable  
+    Equations: dy/dt = (2+0.29*1.015)*y*(1-y/ (10/(1-0.29))); sigma=0.01*1.015  
+    Notes: Meso moderate.
+
+78. ID: Physics_Macro_Supercritical_ModerateEntropy_Regulated  
+    Params: Criticality=0.9, EntropyProduction=0.922, Scale=Macro, Phase=Supercritical, EntropyBand=Moderate  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.9)*(y-x); dy/dt=x*(28*0.922 - z)-y; dz/dt=x*y - (8/3)*(1-0.9)*z; noise~0.01*0.922  
+    Notes: Macro moderate.
+
+79. ID: Physics_Meso_Supercritical_ModerateEntropy_Regulated  
+    Params: Criticality=0.874, EntropyProduction=0.883, Scale=Meso, Phase=Supercritical, EntropyBand=Moderate  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.874)*(y-x); dy/dt=x*(28*0.883 - z)-y; dz/dt=x*y - (8/3)*(1-0.874)*z; noise~0.01*0.883  
+    Notes: Meso moderate.
+
+80. ID: Physics_Planetary_Fragmenting_ModerateEntropy_Regulated  
+    Params: Criticality=0.975, EntropyProduction=0.874, Scale=Planetary, Phase=Fragmenting, EntropyBand=Moderate  
+    Template: Fragmenting  
+    Equations: dN/dt = (0.975*0.874)*N; P(s)~s^(- (2+0.975)); Poisson breaks~0.874  
+    Notes: Planetary moderate frag.
+
+81. ID: Physics_SubMicro_Stable_ModerateEntropy_Regulated  
+    Params: Criticality=0.063, EntropyProduction=0.846, Scale=SubMicro, Phase=Stable, EntropyBand=Moderate  
+    Template: Stable  
+    Equations: d²x/dt² + 2*(0.063/2)*omega*dx/dt + omega²*x = 0; omega=1+0.846*(1-0.063); noise~0.01*0.846  
+    Notes: SubMicro moderate.
+
+82. ID: Physics_SubMicro_Fragmenting_ModerateEntropy_Regulated  
+    Params: Criticality=0.981, EntropyProduction=0.846, Scale=SubMicro, Phase=Fragmenting, EntropyBand=Moderate  
+    Template: Fragmenting  
+    Equations: dN/dt = (0.981*0.846)*N; P(s)~s^(- (2+0.981)); Poisson breaks~0.846  
+    Notes: SubMicro moderate frag.
+
+83. ID: Physics_Planetary_Supercritical_ModerateEntropy_Regulated  
+    Params: Criticality=0.849, EntropyProduction=0.793, Scale=Planetary, Phase=Supercritical, EntropyBand=Moderate  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.849)*(y-x); dy/dt=x*(28*0.793 - z)-y; dz/dt=x*y - (8/3)*(1-0.849)*z; noise~0.01*0.793  
+    Notes: Planetary moderate.
+
+84. ID: Physics_Civilizational_Critical_ModerateEntropy_Regulated  
+    Params: Criticality=0.587, EntropyProduction=0.791, Scale=Civilizational, Phase=Critical, EntropyBand=Moderate  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.587)*(y-x); dy/dt=x*(28*0.791 - z)-y; dz/dt=x*y - (8/3)*(1-0.587)*z; noise~0.01*0.791  
+    Notes: Civilizational moderate.
+
+85. ID: Physics_Planetary_Collapsed_ModerateEntropy_Regulated  
+    Params: Criticality=0.996, EntropyProduction=0.789, Scale=Planetary, Phase=Collapsed, EntropyBand=Moderate  
+    Template: Collapsed  
+    Equations: dy/dt = - (0.789*0.996) * y; y_final = y0 * exp(-gamma*t) + noise~0.01*0.789  
+    Notes: Planetary moderate collapse.
+
+86. ID: Physics_Meso_Stable_ModerateEntropy_Regulated  
+    Params: Criticality=0.165, EntropyProduction=0.787, Scale=Meso, Phase=Stable, EntropyBand=Moderate  
+    Template: Stable  
+    Equations: d²x/dt² + 2*(0.165/2)*omega*dx/dt + omega²*x = 0; omega=1+0.787*(1-0.165); noise~0.01*0.787  
+    Notes: Meso moderate.
+
+87. ID: Physics_Civilizational_Fragmenting_ModerateEntropy_Regulated  
+    Params: Criticality=0.967, EntropyProduction=0.767, Scale=Civilizational, Phase=Fragmenting, EntropyBand=Moderate  
+    Template: Fragmenting  
+    Equations: dN/dt = (0.967*0.767)*N; P(s)~s^(- (2+0.967)); Poisson breaks~0.767  
+    Notes: Civilizational moderate frag.
+
+88. ID: Physics_Macro_Metastable_ModerateEntropy_Regulated  
+    Params: Criticality=0.394, EntropyProduction=0.669, Scale=Macro, Phase=Metastable, EntropyBand=Moderate  
+    Template: Metastable  
+    Equations: dy/dt = (2+0.394*0.669)*y*(1-y/ (10/(1-0.394))); sigma=0.01*0.669  
+    Notes: Macro moderate.
+
+89. ID: Physics_Planetary_Metastable_ModerateEntropy_Regulated  
+    Params: Criticality=0.481, EntropyProduction=0.669, Scale=Planetary, Phase=Metastable, EntropyBand=Moderate  
+    Template: Metastable  
+    Equations: dy/dt = (2+0.481*0.669)*y*(1-y/ (10/(1-0.481))); sigma=0.01*0.669  
+    Notes: Planetary moderate.
+
+90. ID: Physics_Planetary_Critical_ModerateEntropy_Regulated  
+    Params: Criticality=0.759, EntropyProduction=0.648, Scale=Planetary, Phase=Critical, EntropyBand=Moderate  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.759)*(y-x); dy/dt=x*(28*0.648 - z)-y; dz/dt=x*y - (8/3)*(1-0.759)*z; noise~0.01*0.648  
+    Notes: Planetary moderate.
+
+91. ID: Physics_Macro_Fragmenting_ModerateEntropy_Regulated  
+    Params: Criticality=0.967, EntropyProduction=0.621, Scale=Macro, Phase=Fragmenting, EntropyBand=Moderate  
+    Template: Fragmenting  
+    Equations: dN/dt = (0.967*0.621)*N; P(s)~s^(- (2+0.967)); Poisson breaks~0.621  
+    Notes: Macro moderate frag.
+
+92. ID: Physics_Micro_Metastable_ModerateEntropy_Regulated  
+    Params: Criticality=0.418, EntropyProduction=0.576, Scale=Micro, Phase=Metastable, EntropyBand=Moderate  
+    Template: Metastable  
+    Equations: dy/dt = (2+0.418*0.576)*y*(1-y/ (10/(1-0.418))); sigma=0.01*0.576  
+    Notes: Micro moderate.
+
+93. ID: Physics_Civilizational_Collapsed_ModerateEntropy_Regulated  
+    Params: Criticality=0.991, EntropyProduction=0.56, Scale=Civilizational, Phase=Collapsed, EntropyBand=Moderate  
+    Template: Collapsed  
+    Equations: dy/dt = - (0.56*0.991) * y; y_final = y0 * exp(-gamma*t) + noise~0.01*0.56  
+    Notes: Civilizational moderate collapse.
+
+94. ID: Physics_Micro_Critical_ModerateEntropy_Regulated  
+    Params: Criticality=0.655, EntropyProduction=0.526, Scale=Micro, Phase=Critical, EntropyBand=Moderate  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.655)*(y-x); dy/dt=x*(28*0.526 - z)-y; dz/dt=x*y - (8/3)*(1-0.655)*z; noise~0.01*0.526  
+    Notes: Micro moderate.
+
+95. ID: Physics_Planetary_Stable_ModerateEntropy_Regulated  
+    Params: Criticality=0.149, EntropyProduction=0.516, Scale=Planetary, Phase=Stable, EntropyBand=Moderate  
+    Template: Stable  
+    Equations: d²x/dt² + 2*(0.149/2)*omega*dx/dt + omega²*x = 0; omega=1+0.516*(1-0.149); noise~0.01*0.516  
+    Notes: Planetary moderate.
+
+96. ID: Physics_SubMicro_Collapsed_ModerateEntropy_Regulated  
+    Params: Criticality=0.996, EntropyProduction=0.47, Scale=SubMicro, Phase=Collapsed, EntropyBand=Moderate  
+    Template: Collapsed  
+    Equations: dy/dt = - (0.47*0.996) * y; y_final = y0 * exp(-gamma*t) + noise~0.01*0.47  
+    Notes: SubMicro moderate collapse.
+
+97. ID: Physics_SubMicro_Critical_ModerateEntropy_Regulated  
+    Params: Criticality=0.747, EntropyProduction=0.447, Scale=SubMicro, Phase=Critical, EntropyBand=Moderate  
+    Template: Critical/Supercritical  
+    Equations: dx/dt=10*(1+0.747)*(y-x); dy/dt=x*(28*0.447 - z)-y; dz/dt=x*y - (8/3)*(1-0.747)*z; noise~0.01*0.447  
+    Notes: SubMicro moderate.
+
+98. ID: Physics_Macro_Stable_ModerateEntropy_Regulated  
+    Params: Criticality=0.123, EntropyProduction=0.438, Scale=Macro, Phase=Stable, EntropyBand=Moderate  
+    Template: Stable  
+    Equations: d²x/dt² + 2*(0.123/2)*omega*dx/dt + omega²*x = 0; omega=1+0.438*(1-0.123); noise~0.01*0.438  
+    Notes: Macro moderate.
+
+99. ID: Physics_Micro_Stable_ModerateEntropy_Regulated  
+    Params: Criticality=0.185, EntropyProduction=0.427, Scale=Micro, Phase=Stable, EntropyBand=Moderate  
+    Template: Stable  
+    Equations: d²x/dt² + 2*(0.185/2)*omega*dx/dt + omega²*x = 0; omega=1+0.427*(1-0.185); noise~0.01*0.427  
+    Notes: Micro moderate.
+
+100. ID: Physics_Meso_Critical_ModerateEntropy_Regulated  
+     Params: Criticality=0.658, EntropyProduction=0.423, Scale=Meso, Phase=Critical, EntropyBand=Moderate  
+     Template: Critical/Supercritical  
+     Equations: dx/dt=10*(1+0.658)*(y-x); dy/dt=x*(28*0.423 - z)-y; dz/dt=x*y - (8/3)*(1-0.658)*z; noise~0.01*0.423  
+     Notes: Meso moderate.
+
+101. ID: Physics_Meso_Fragmenting_ModerateEntropy_Regulated  
+     Params: Criticality=0.986, EntropyProduction=0.412, Scale=Meso, Phase=Fragmenting, EntropyBand=Moderate  
+     Template: Fragmenting  
+     Equations: dN/dt = (0.986*0.412)*N; P(s)~s^(- (2+0.986)); Poisson breaks~0.412  
+     Notes: Meso moderate frag.
+
+102. ID: Physics_Civilizational_Supercritical_ModerateEntropy_Regulated  
+     Params: Criticality=0.804, EntropyProduction=0.412, Scale=Civilizational, Phase=Supercritical, EntropyBand=Moderate  
+     Template: Critical/Supercritical  
+     Equations: dx/dt=10*(1+0.804)*(y-x); dy/dt=x*(28*0.412 - z)-y; dz/dt=x*y - (8/3)*(1-0.804)*z; noise~0.01*0.412  
+     Notes: Civilizational moderate.
+
+103. ID: Physics_Civilizational_Stable_ModerateEntropy_Regulated  
+     Params: Criticality=0.188, EntropyProduction=0.411, Scale=Civilizational, Phase=Stable, EntropyBand=Moderate  
+     Template: Stable  
+     Equations: d²x/dt² + 2*(0.188/2)*omega*dx/dt + omega²*x = 0; omega=1+0.411*(1-0.188); noise~0.01*0.411  
+     Notes: Civilizational moderate.
+
+104. ID: Physics_Micro_Fragmenting_ModerateEntropy_Regulated  
+     Params: Criticality=0.959, EntropyProduction=0.389, Scale=Micro, Phase=Fragmenting, EntropyBand=Moderate  
+     Template: Fragmenting  
+     Equations: dN/dt = (0.959*0.389)*N; P(s)~s^(- (2+0.959)); Poisson breaks~0.389  
+     Notes: Micro moderate frag.
+
+105. ID: Physics_Macro_Collapsed_ModerateEntropy_Regulated  
+     Params: Criticality=0.992, EntropyProduction=0.377, Scale=Macro, Phase=Collapsed, EntropyBand=Moderate  
+     Template: Collapsed  
+     Equations: dy/dt = - (0.377*0.992) * y; y_final = y0 * exp(-gamma*t) + noise~0.01*0.377  
+     Notes: Macro moderate collapse.
+
+106. ID: Physics_Macro_Critical_ModerateEntropy_Regulated  
+     Params: Criticality=0.605, EntropyProduction=0.372, Scale=Macro, Phase=Critical, EntropyBand=Moderate  
+     Template: Critical/Supercritical  
+     Equations: dx/dt=10*(1+0.605)*(y-x); dy/dt=x*(28*0.372 - z)-y; dz/dt=x*y - (8/3)*(1-0.605)*z; noise~0.01*0.372  
+     Notes: Macro moderate.
+
+107. ID: Physics_Meso_Collapsed_ModerateEntropy_Regulated  
+     Params: Criticality=0.998, EntropyProduction=0.349, Scale=Meso, Phase=Collapsed, EntropyBand=Moderate  
+     Template: Collapsed  
+     Equations: dy/dt = - (0.349*0.998) * y; y_final = y0 * exp(-gamma*t) + noise~0.01*0.349  
+     Notes: Meso moderate collapse.
+
+108. ID: Physics_SubMicro_Supercritical_ModerateEntropy_Regulated  
+     Params: Criticality=0.831, EntropyProduction=0.31, Scale=SubMicro, Phase=Supercritical, EntropyBand=Moderate  
+     Template: Critical/Supercritical  
+     Equations: dx/dt=10*(1+0.831)*(y-x); dy/dt=x*(28*0.31 - z)-y; dz/dt=x*y - (8/3)*(1-0.831)*z; noise~0.01*0.31  
+     Notes: SubMicro moderate.
+
+109. ID: Physics_SubMicro_Collapsed_LowEntropy_Regulated  
+     Params: Criticality=0.993, EntropyProduction=0.3, Scale=SubMicro, Phase=Collapsed, EntropyBand=Low  
+     Template: Collapsed  
+     Equations: dy/dt = - (0.3*0.993) * y; y_final = y0 * exp(-gamma*t) + noise~0.001*0.3  
+     Notes: Low entropy: Minimal noise for precision.
+
+110. ID: Physics_Planetary_Collapsed_LowEntropy_Regulated  
+     Params: Criticality=0.993, EntropyProduction=0.295, Scale=Planetary, Phase=Collapsed, EntropyBand=Low  
+     Template: Collapsed  
+     Equations: dy/dt = - (0.295*0.993) * y; y_final = y0 * exp(-gamma*t) + noise~0.001*0.295  
+     Notes: Planetary low.
+
+111. ID: Physics_Micro_Collapsed_LowEntropy_Regulated  
+     Params: Criticality=0.998, EntropyProduction=0.292, Scale=Micro, Phase=Collapsed, EntropyBand=Low  
+     Template: Collapsed  
+     Equations: dy/dt = - (0.292*0.998) * y; y_final = y0 * exp(-gamma*t) + noise~0.001*0.292  
+     Notes: Micro low.
+
+112. ID: Physics_Civilizational_Fragmenting_LowEntropy_Regulated  
+     Params: Criticality=0.983, EntropyProduction=0.282, Scale=Civilizational, Phase=Fragmenting, EntropyBand=Low  
+     Template: Fragmenting  
+     Equations: dN/dt = (0.983*0.282)*N; P(s)~s^(- (2+0.983)); Poisson breaks~0.282  
+     Notes: Civilizational low frag.
+
+113. ID: Physics_SubMicro_Critical_LowEntropy_Regulated  
+     Params: Criticality=0.559, EntropyProduction=0.28, Scale=SubMicro, Phase=Critical, EntropyBand=Low  
+     Template: Critical/Supercritical  
+     Equations: dx/dt=10*(1+0.559)*(y-x); dy/dt=x*(28*0.28 - z)-y; dz/dt=x*y - (8/3)*(1-0.559)*z; noise~0.001*0.28  
+     Notes: SubMicro low.
+
+114. ID: Physics_Civilizational_Stable_LowEntropy_Regulated  
+     Params: Criticality=0.064, EntropyProduction=0.276, Scale=Civilizational, Phase=Stable, EntropyBand=Low  
+     Template: Stable  
+     Equations: d²x/dt² + 2*(0.064/2)*omega*dx/dt + omega²*x = 0; omega=1+0.276*(1-0.064); noise~0.001*0.276  
+     Notes: Civilizational low.
+
+115. ID: Physics_Micro_Stable_LowEntropy_Regulated  
+     Params: Criticality=0.148, EntropyProduction=0.274, Scale=Micro, Phase=Stable, EntropyBand=Low  
+     Template: Stable  
+     Equations: d²x/dt² + 2*(0.148/2)*omega*dx/dt + omega²*x = 0; omega=1+0.274*(1-0.148); noise~0.001*0.274  
+     Notes: Micro low.
+
+116. ID: Physics_Civilizational_Supercritical_LowEntropy_Regulated  
+     Params: Criticality=0.828, EntropyProduction=0.263, Scale=Civilizational, Phase=Supercritical, EntropyBand=Low  
+     Template: Critical/Supercritical  
+     Equations: dx/dt=10*(1+0.828)*(y-x); dy/dt=x*(28*0.263 - z)-y; dz/dt=x*y - (8/3)*(1-0.828)*z; noise~0.001*0.263  
+     Notes: Civilizational low.
+
+117. ID: Physics_Meso_Collapsed_LowEntropy_Regulated  
+     Params: Criticality=0.994, EntropyProduction=0.245, Scale=Meso, Phase=Collapsed, EntropyBand=Low  
+     Template: Collapsed  
+     Equations: dy/dt = - (0.245*0.994) * y; y_final = y0 * exp(-gamma*t) + noise~0.001*0.245  
+     Notes: Meso low collapse.
+
+118. ID: Physics_Macro_Metastable_LowEntropy_Regulated  
+     Params: Criticality=0.425, EntropyProduction=0.245, Scale=Macro, Phase=Metastable, EntropyBand=Low  
+     Template: Metastable  
+     Equations: dy/dt = (2+0.425*0.245)*y*(1-y/ (10/(1-0.425))); sigma=0.001*0.245  
+     Notes: Macro low.
+
+119. ID: Physics_Civilizational_Collapsed_LowEntropy_Regulated  
+     Params: Criticality=0.999, EntropyProduction=0.243, Scale=Civilizational, Phase=Collapsed, EntropyBand=Low  
+     Template: Collapsed  
+     Equations: dy/dt = - (0.243*0.999) * y; y_final = y0 * exp(-gamma*t) + noise~0.001*0.243  
+     Notes: Civilizational low collapse.
+
+120. ID: Physics_Macro_Stable_LowEntropy_Regulated  
+     Params: Criticality=0.106, EntropyProduction=0.241, Scale=Macro, Phase=Stable, EntropyBand=Low  
+     Template: Stable  
+     Equations: d²x/dt² + 2*(0.106/2)*omega*dx/dt + omega²*x = 0; omega=1+0.241*(1-0.106); noise~0.001*0.241  
+     Notes: Macro low.
+
+121. ID: Physics_Micro_Supercritical_LowEntropy_Regulated  
+     Params: Criticality=0.904, EntropyProduction=0.24, Scale=Micro, Phase=Supercritical, EntropyBand=Low  
+     Template: Critical/Supercritical  
+     Equations: dx/dt=10*(1+0.904)*(y-x); dy/dt=x*(28*0.24 - z)-y; dz/dt=x*y - (8/3)*(1-0.904)*z; noise~0.001*0.24  
+     Notes: Micro low.
+
+122. ID: Physics_SubMicro_Fragmenting_LowEntropy_Regulated  
+     Params: Criticality=0.968, EntropyProduction=0.235, Scale=SubMicro, Phase=Fragmenting, EntropyBand=Low  
+     Template: Fragmenting  
+     Equations: dN/dt = (0.968*0.235)*N; P(s)~s^(- (2+0.968)); Poisson breaks~0.235  
+     Notes: SubMicro low frag.
+
+123. ID: Physics_Civilizational_Critical_LowEntropy_Regulated  
+     Params: Criticality=0.679, EntropyProduction=0.218, Scale=Civilizational, Phase=Critical, EntropyBand=Low  
+     Template: Critical/Supercritical  
+     Equations: dx/dt=10*(1+0.679)*(y-x); dy/dt=x*(28*0.218 - z)-y; dz/dt=x*y - (8/3)*(1-0.679)*z; noise~0.001*0.218  
+     Notes: Civilizational low.
+
+124. ID: Physics_Planetary_Critical_LowEntropy_Regulated  
+     Params: Criticality=0.562, EntropyProduction=0.211, Scale=Planetary, Phase=Critical, EntropyBand=Low  
+     Template: Critical/Supercritical  
+     Equations: dx/dt=10*(1+0.562)*(y-x); dy/dt=x*(28*0.211 - z)-y; dz/dt=x*y - (8/3)*(1-0.562)*z; noise~0.001*0.211  
+     Notes: Planetary low.
+
+125. ID: Physics_Micro_Critical_LowEntropy_Regulated  
+     Params: Criticality=0.608, EntropyProduction=0.209, Scale=Micro, Phase=Critical, EntropyBand=Low  
+     Template: Critical/Supercritical  
+     Equations: dx/dt=10*(1+0.608)*(y-x); dy/dt=x*(28*0.209 - z)-y; dz/dt=x*y - (8/3)*(1-0.608)*z; noise~0.001*0.209  
+     Notes: Micro low.
+
+126. ID: Physics_SubMicro_Supercritical_LowEntropy_Regulated  
+     Params: Criticality=0.801, EntropyProduction=0.196, Scale=SubMicro, Phase=Supercritical, EntropyBand=Low  
+     Template: Critical/Supercritical  
+     Equations: dx/dt=10*(1+0.801)*(y-x); dy/dt=x*(28*0.196 - z)-y; dz/dt=x*y - (8/3)*(1-0.801)*z; noise~0.001*0.196  
+     Notes: SubMicro low.
+
+127. ID: Physics_SubMicro_Stable_LowEntropy_Regulated  
+     Params: Criticality=0.188, EntropyProduction=0.189, Scale=SubMicro, Phase=Stable, EntropyBand=Low  
+     Template: Stable  
+     Equations: d²x/dt² + 2*(0.188/2)*omega*dx/dt + omega²*x = 0; omega=1+0.189*(1-0.188); noise~0.001*0.189  
+     Notes: SubMicro low.
+
+128. ID: Physics_Meso_Critical_LowEntropy_Regulated  
+     Params: Criticality=0.759, EntropyProduction=0.182, Scale=Meso, Phase=Critical, EntropyBand=Low  
+     Template: Critical/Supercritical  
+     Equations: dx/dt=10*(1+0.759)*(y-x); dy/dt=x*(28*0.182 - z)-y; dz/dt=x*y - (8/3)*(1-0.759)*z; noise~0.001*0.182  
+     Notes: Meso low.
+
+129. ID: Physics_Planetary_Supercritical_LowEntropy_Regulated  
+     Params: Criticality=0.872, EntropyProduction=0.175, Scale=Planetary, Phase=Supercritical, EntropyBand=Low  
+     Template: Critical/Supercritical  
+     Equations: dx/dt=10*(1+0.872)*(y-x); dy/dt=x*(28*0.175 - z)-y; dz/dt=x*y - (8/3)*(1-0.872)*z; noise~0.001*0.175  
+     Notes: Planetary low.
+
+130. ID: Physics_Meso_Stable_LowEntropy_Regulated  
+     Params: Criticality=0.11, EntropyProduction=0.171, Scale=Meso, Phase=Stable, EntropyBand=Low  
+     Template: Stable  
+     Equations: d²x/dt² + 2*(0.11/2)*omega*dx/dt + omega²*x = 0; omega=1+0.171*(1-0.11); noise~0.001*0.171  
+     Notes: Meso low.
+
+131. ID: Physics_Meso_Supercritical_LowEntropy_Regulated  
+     Params: Criticality=0.87, EntropyProduction=0.161, Scale=Meso, Phase=Supercritical, EntropyBand=Low  
+     Template: Critical/Supercritical  
+     Equations: dx/dt=10*(1+0.87)*(y-x); dy/dt=x*(28*0.161 - z)-y; dz/dt=x*y - (8/3)*(1-0.87)*z; noise~0.001*0.161  
+     Notes: Meso low.
+
+132. ID: Physics_Planetary_Stable_LowEntropy_Regulated  
+     Params: Criticality=0.116, EntropyProduction=0.158, Scale=Planetary, Phase=Stable, EntropyBand=Low  
+     Template: Stable  
+     Equations: d²x/dt² + 2*(0.116/2)*omega*dx/dt + omega²*x = 0; omega=1+0.158*(1-0.116); noise~0.001*0.158  
+     Notes: Planetary low.
+
+133. ID: Physics_Macro_Fragmenting_LowEntropy_Regulated  
+     Params: Criticality=0.962, EntropyProduction=0.138, Scale=Macro, Phase=Fragmenting, EntropyBand=Low  
+     Template: Fragmenting  
+     Equations: dN/dt = (0.962*0.138)*N; P(s)~s^(- (2+0.962)); Poisson breaks~0.138  
+     Notes: Macro low frag.
+
+134. ID: Physics_Meso_Metastable_LowEntropy_Regulated  
+     Params: Criticality=0.419, EntropyProduction=0.136, Scale=Meso, Phase=Metastable, EntropyBand=Low  
+     Template: Metastable  
+     Equations: dy/dt = (2+0.419*0.136)*y*(1-y/ (10/(1-0.419))); sigma=0.001*0.136  
+     Notes: Meso low.
+
+135. ID: Physics_Civilizational_Metastable_LowEntropy_Regulated  
+     Params: Criticality=0.403, EntropyProduction=0.133, Scale=Civilizational, Phase=Metastable, EntropyBand=Low  
+     Template: Metastable  
+     Equations: dy/dt = (2+0.403*0.133)*y*(1-y/ (10/(1-0.403))); sigma=0.001*0.133  
+     Notes: Civilizational low.
+
+136. ID: Physics_Planetary_Metastable_LowEntropy_Regulated  
+     Params: Criticality=0.453, EntropyProduction=0.112, Scale=Planetary, Phase=Metastable, EntropyBand=Low  
+     Template: Metastable  
+     Equations: dy/dt = (2+0.453*0.112)*y*(1-y/ (10/(1-0.453))); sigma=0.001*0.112  
+     Notes: Planetary low.
+
+137. ID: Physics_Planetary_Fragmenting_LowEntropy_Regulated  
+     Params: Criticality=0.971, EntropyProduction=0.111, Scale=Planetary, Phase=Fragmenting, EntropyBand=Low  
+     Template: Fragmenting  
+     Equations: dN/dt = (0.971*0.111)*N; P(s)~s^(- (2+0.971)); Poisson breaks~0.111  
+     Notes: Planetary low frag.
+
+138. ID: Physics_Meso_Fragmenting_LowEntropy_Regulated  
+     Params: Criticality=0.983, EntropyProduction=0.087, Scale=Meso, Phase=Fragmenting, EntropyBand=Low  
+     Template: Fragmenting  
+     Equations: dN/dt = (0.983*0.087)*N; P(s)~s^(- (2+0.983)); Poisson breaks~0.087  
+     Notes: Meso low frag.
+
+139. ID: Physics_Macro_Critical_LowEntropy_Regulated  
+     Params: Criticality=0.553, EntropyProduction=0.085, Scale=Macro, Phase=Critical, EntropyBand=Low  
+     Template: Critical/Supercritical  
+     Equations: dx/dt=10*(1+0.553)*(y-x); dy/dt=x*(28*0.085 - z)-y; dz/dt=x*y - (8/3)*(1-0.553)*z; noise~0.001*0.085  
+     Notes: Macro low.
+
+140. ID: Physics_SubMicro_Metastable_LowEntropy_Regulated  
+     Params: Criticality=0.281, EntropyProduction=0.075, Scale=SubMicro, Phase=Metastable, EntropyBand=Low  
+     Template: Metastable  
+     Equations: dy/dt = (2+0.281*0.075)*y*(1-y/ (10/(1-0.281))); sigma=0.001*0.075  
+     Notes: SubMicro low.
+
+141. ID: Physics_Macro_Collapsed_LowEntropy_Regulated  
+     Params: Criticality=0.999, EntropyProduction=0.073, Scale=Macro, Phase=Collapsed, EntropyBand=Low  
+     Template: Collapsed  
+     Equations: dy/dt = - (0.073*0.999) * y; y_final = y0 * exp(-gamma*t) + noise~0.001*0.073  
+     Notes: Macro low collapse.
+
+142. ID: Physics_Micro_Fragmenting_LowEntropy_Regulated  
+     Params: Criticality=0.966, EntropyProduction=0.07, Scale=Micro, Phase=Fragmenting, EntropyBand=Low  
+     Template: Fragmenting  
+     Equations: dN/dt = (0.966*0.07)*N; P(s)~s^(- (2+0.966)); Poisson breaks~0.07  
+     Notes: Micro low frag.
+
+143. ID: Physics_Micro_Metastable_LowEntropy_Regulated  
+     Params: Criticality=0.45, EntropyProduction=0.066, Scale=Micro, Phase=Metastable, EntropyBand=Low  
+     Template: Metastable  
+     Equations: dy/dt = (2+0.45*0.066)*y*(1-y/ (10/(1-0.45))); sigma=0.001*0.066  
+     Notes: Micro low.
+
+144. ID: Physics_Macro_Supercritical_LowEntropy_Regulated  
+     Params: Criticality=0.848, EntropyProduction=0.066, Scale=Macro, Phase=Supercritical, EntropyBand=Low  
+     Template: Critical/Supercritical  
+     Equations: dx/dt=10*(1+0.848)*(y-x); dy/dt=x*(28*0.066 - z)-y; dz/dt=x*y - (8/3)*(1-0.848)*z; noise~0.001*0.066  
+     Notes: Macro low.
+
+## Archival Notes
+This document is self-contained for traceability. For implementation, integrate into RegimeContainer class by mapping ID to parametrized solver. All equations are solvable via scipy.integrate.solve_ivp as per prior code. Backup as plain ASCII text.

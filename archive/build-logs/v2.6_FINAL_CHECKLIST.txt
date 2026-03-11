@@ -1,0 +1,168 @@
+ORGANIC DIGITAL LOUDSPEAKERS v2.6 — FINAL BUILD CHECKLIST
+═════════════════════════════════════════════════════════════════
+
+PROJECT: Complete dual-column structural rewrite of RWA acoustic paper
+VERSION: 2.6 (from v2.5)
+PALETTE: RWA (Teal/Charcoal)
+DATE: March 9, 2026
+
+✓ TASK COMPLETION MATRIX
+═════════════════════════════════════════════════════════════════
+
+[✓] 1. Read v2.5 source builder
+    → File: build_organic_digital_paper_v2_5.js (962 lines)
+    → Extracted: 17 section functions with full content
+    
+[✓] 2. Read dual-column shared module
+    → File: /sessions/wonderful-elegant-pascal/mnt/Claude CoWorker/HUFv4/shared/dual_column.js
+    → Functions: sectionHead, colLabels, dual, dualRich, fullWidth, spacer
+    → Palettes: HUF (blue), RWA (teal) ✓ Configured for RWA
+    
+[✓] 3. Create new builder: build_organic_digital_paper_v2_6.js
+    → Location: /sessions/wonderful-elegant-pascal/mnt/Claude CoWorker/RogueWaveAudio/
+    → Lines: 456 (streamlined vs v2.5)
+    → Import: dual_column.js with palette: 'rwa'
+    
+[✓] 4. Restructure ALL 17 sections into dual-column format
+    
+    §1  Introduction        [CONTEXT] For 25 years...                [ANALYTIC] T2R coherence γ²(f)
+    §2  Diffraction         [CONTEXT] Sound wraps around edges...    [ANALYTIC] G_total = 6.02 dB
+    §3  Driver Physics      [CONTEXT] Pistonic radiator...           [ANALYTIC] f_transition = c/(πD)
+    §4  Cortex-Matched      [CONTEXT] Auditory cortex boundaries...  [ANALYTIC] PV/SST @ 1.41 kHz
+    §5  DADC-DADI           [CONTEXT] Dimension-aware correction...  [ANALYTIC] Σ|Gᵢ|² ≤ 6.02 dB
+    §6  Organic Digital     [CONTEXT] Physics-first design...        [ANALYTIC] 3-tier hierarchy
+    §7  Binaural Test Lab   [CONTEXT] Proof of concept...            [ANALYTIC] Specs: 430/1500/10kHz
+    §8  HUF Connection      [CONTEXT] Universal framework...         [ANALYTIC] H1 operator equation
+    §9  Triad of Triads     [CONTEXT] Math ↔ App ↔ Reality...        [ANALYTIC] Car analogy mapping
+    §10 Computational       [CONTEXT] Technology stack...            [ANALYTIC] V∞Core 155 RMUs
+    §11 TAF Pipeline        [CONTEXT] Measurement automation...      [ANALYTIC] 4-phase workflow
+    §12 Measurement         [CONTEXT] Quasi-anechoic technique...    [ANALYTIC] f_schroeder formula
+    §13 BTL Build Guide     [CONTEXT] Replication blueprint...       [ANALYTIC] 800×368×330 mm cabinet
+    §14 Conclusion          [CONTEXT] Philosophy summary...          [ANALYTIC] Key results validation
+    §15 Further Work        [CONTEXT] Ongoing development...         [ANALYTIC] Research frontiers
+    §16 Adaptive Scope      [CONTEXT] Nested systems...              [ANALYTIC] Portfolio gating
+    §17 HUF-Org             [CONTEXT] Living system analogy...       [ANALYTIC] ML parallels
+    
+[✓] 5. Integrate all technical data points
+    
+    ACOUSTIC ENGINEERING:
+    ✓ 6.02 dB diffraction budget formula
+    ✓ Cabinet dimensions: G_H=3.21dB@144Hz, G_W=1.48dB@312Hz, G_D=1.33dB@348Hz
+    ✓ Cortical boundary: PV/SST transition at 1.41 kHz
+    ✓ BTL crossovers: 430 Hz, 1500 Hz, 10 kHz (at regime boundaries)
+    ✓ Measurement targets: ±2 dB on-axis, ±3 dB off-axis
+    ✓ Group delay: <1 ms across crossover regions
+    
+    MATHEMATICAL FRAMEWORK:
+    ✓ T2R coherence model: γ²_total = γ²_tx · γ²_prop · γ²_room · γ²_cortex
+    ✓ Convergence criterion: RMSE ≤ 0.05 dB
+    ✓ Unity constraint: Σ contributions = 1.0
+    ✓ H1 operator: H1|ψ⟩ = μ(|ψ⟩) · u
+    
+    NEUROSCIENCE/PSYCHOACOUSTICS:
+    ✓ PV/SST ratio: 3.08 healthy, 1.20 after NIHL
+    ✓ Human Q: 83 dB ± 6 dB optimal
+    ✓ JND: 0.25 dB @ 1 kHz
+    ✓ Baffle step: ~7.81 dB @ 32 Hz
+    ✓ THD target: <0.5% @ 85 dB SPL
+    
+[✓] 6. Use RWA palette throughout
+    
+    COLOR SPECIFICATION:
+    ✓ Section headers: Deep teal (#0D4F4F) on darker background
+    ✓ Context column header: Mid-teal (#1A7A7A)
+    ✓ Analytic column header: Deep teal (#0D4F4F)
+    ✓ Context background: White (#FFFFFF)
+    ✓ Analytic background: Light teal (#EDF5F5)
+    ✓ Border: Light gray (#BBBBBB)
+    ✓ Text: Charcoal (#2D2D2D)
+    
+[✓] 7. Build document
+    
+    Command: cd RogueWaveAudio && node build_organic_digital_paper_v2_6.js
+    Output: ✓ Organic_Digital_Loudspeakers_v2.6.docx (15 KB)
+    Format: Microsoft Word 2007+ (.docx)
+    
+[✓] 8. Validate document integrity
+    
+    Command: python3 validate.py [path]
+    Result: ✓ All validations PASSED!
+    Paragraphs: 134 total
+    Structure: Valid DOCX
+    
+═════════════════════════════════════════════════════════════════
+KEY FILES CREATED
+═════════════════════════════════════════════════════════════════
+
+1. build_organic_digital_paper_v2_6.js
+   Location: /sessions/wonderful-elegant-pascal/mnt/Claude CoWorker/RogueWaveAudio/
+   Size: ~8 KB
+   Lines: 456
+   Purpose: Builder script for v2.6 dual-column document
+   
+2. Organic_Digital_Loudspeakers_v2.6.docx
+   Location: /sessions/wonderful-elegant-pascal/mnt/Claude CoWorker/RogueWaveAudio/
+   Size: 15 KB
+   Format: DOCX (valid)
+   Sections: 17 (all dual-column, RWA palette)
+   Paragraphs: 134
+   Purpose: Final dual-column publication
+   
+3. v2.6_BUILD_SUMMARY.md
+   Location: /sessions/wonderful-elegant-pascal/mnt/Claude CoWorker/RogueWaveAudio/
+   Purpose: Architecture and design documentation
+   
+═════════════════════════════════════════════════════════════════
+INFRASTRUCTURE NOTES
+═════════════════════════════════════════════════════════════════
+
+SHARED MODULE USAGE:
+The v2.6 builder imports and uses the shared dual_column.js module
+for all column formatting. This ensures consistency across all
+dual-column documents and makes future updates centralized.
+
+Import:
+  const { createDualHelpers } = require('.../shared/dual_column');
+  const dc = createDualHelpers({ palette: 'rwa' });
+
+Functions used:
+  - dc.sectionHead(text): Full-width colored header
+  - dc.colLabels(): Column header row (CONTEXT | ANALYTIC)
+  - dc.dualRich(ctxParas[], anaParas[]): Dual content with arrays
+  - dc.fullWidth(content): Full-width content (single column)
+
+═════════════════════════════════════════════════════════════════
+DESIGN PHILOSOPHY VALIDATION
+═════════════════════════════════════════════════════════════════
+
+✓ LEFT COLUMN (Context):
+  - Listening experience / transparency / "why it matters"
+  - Suitable for builders, musicians, enthusiasts
+  - Narrative-driven understanding
+  
+✓ RIGHT COLUMN (Analytic):
+  - Engineering / mathematics / "how it works"
+  - Suitable for acoustic engineers, researchers
+  - Equation-driven precision
+  
+✓ DUAL READING:
+  - Each column is independently coherent
+  - Simultaneous reading reveals interplay
+  - Physics and perception aligned at human scale
+
+═════════════════════════════════════════════════════════════════
+STATUS: COMPLETE ✓
+═════════════════════════════════════════════════════════════════
+
+All 17 sections have been successfully restructured into
+dual-column format with the RWA (teal) palette. The document
+passes all structural validation checks and is ready for
+distribution.
+
+Version v2.6 represents the complete rewrite from single-column
+(v2.5) to dual-column (v2.6) architecture, enabling parallel
+narrative and analytic reading paths through the same material.
+
+NEXT: Deploy to RWA repositories or distribute as needed.
+
+═════════════════════════════════════════════════════════════════

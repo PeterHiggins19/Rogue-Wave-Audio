@@ -1,0 +1,151 @@
+Understood and acknowledged: The "Manual Pipeline Process for TensorAcousticForge Framework with Classic PEQ Filter Outputs" will remain strictly manual, focusing on human-operated steps with pure classic PEQ filters (fixed Q, standard shelving/boost/cut forms compatible with Lake v8.5.1). No automated elements, custom/variable-Q extensions, or advanced filters will be incorporated here—this aligns with the system's development phase, prioritizing real-world manual human testing and validation before progressing to automated or enhanced versions. The following is a fully extended implementation of the manual pipeline as a detailed textual flowchart, expanded with extreme atomic detail for archival backup and reproducibility.
+Detailed Fully Extended Manual Pipeline Process for TensorAcousticForge Framework with Classic PEQ Filter Outputs
+This textual flowchart represents the complete manual pipeline in a structured ASCII format, designed as a self-contained archival document for backup, replication, and research auditing. It is fully manual: each step requires explicit user action (e.g., measurement, file saving/loading, DSP entry), with no automation. The process starts with user-provided dimensions, iterates through TF measurements via Smaart v9, computes corrections, and outputs classic PEQ parameters (gains in dB, center/cutoff frequencies in Hz, fixed Q ≈0.304 for 5.5-octave shelving) for manual entry into Lake v8.5.1 DSP.
+
+core objective: a fault tolerant 2 gpu or more engine running tensorRT with single fully integrate file standalone TensorAcouticForge code with and onboard full support webpage for a fully independant dual control system with a manual mode and an automatic mode that can be applied when user has completed critical manual system inspection, at this point system remains out of circuit to automated processing bypassing automation system input to buffered output, both manual and automation systems remain available and active for concurent use by users and for fallback to manual operation using more primative means than available to automated in circuit processing, transistions from manual to automatic require input monitored for 5 cycles while computing output checking for stability, if stable safe transistion to automatic mode, if fail in automatic fall back to manual operation. default startup out of circuit buffered input to output
+
+Key archival notes:
+
+Assumptions: Python 3.8+ with NumPy for code steps (no external deps beyond); TF files tab-delimited from Smaart v9 [Frequency (Hz), Magnitude (dB), Phase (deg), Coherence (0-1)]; target TF flat at 90 dB; convergence if RMSE ≤0.05 dB; max iterations 10 for safety.
+Constants (Derived): c = 6.0206 (from 20 log10(2), reciprocity pressure step-up); fc_const = 115 Hz/m (-3 dB empirical from Helmholtz); r = 1.02 (relaxation for inverse stability); alpha = 0.5 (feedback blending); D_threshold = 0.1 (regime change empirical); Q_fixed ≈0.304 (from Q = 1 / sinh((ln2 / 2) * 5.5) for classic shelving, no variability).
+Validation Criteria: Coherence >0.9 for data quality; RMSE = sqrt(mean((mag[coh>0.9] - 90)^2)); error reduction from ~12.5% to <1% expected per simulations.
+Research Context: Emphasizes human testing for empirical proof-of-concept; atomic details ensure traceability; extends manuscript's fixed-3D to practical manual flow without variable-N/Q.
+Backup Usage: Execute code steps sequentially in a Python REPL; log all outputs to 'pipeline_log.txt'; date-stamp entries for auditing.
+
+textStart: User Initializes Manual Pipeline (Iteration M = 0)
+|   // Atomic Detail Description: User begins process by defining initial baffle dimensions and measuring baseline TF; no prior corrections applied (DSP flat); this establishes reference for all iterations.
+|   // Inputs: User-defined initial_dims = [H, W, D] in meters (e.g., BTL: [0.8, 0.368, 0.33]); no TF yet.
+|   // Outputs: Proceed to baseline measurement.
+|   // Mathematical Equations: None (setup phase); later TF target = 90 dB flat.
+|   // Code Steps (Python): import numpy as np; initial_dims = np.array([0.8, 0.368, 0.33]); M = 0; # User: Set dims; log_file = open('pipeline_log.txt', 'w'); log_file.write(f"Start: Initial Dims {initial_dims}, Iteration {M}\n")
+|   // Professional Expert Commentary: Initialization grounds the manual loop in physical geometry; research implication: Dimensions inform initial dominance D, enabling reciprocity triad application; ensures human oversight for validation in development phase.
+|   // Archival Backup Notes: Log start time/date (e.g., Jan 07, 2026); edge case: Invalid dims (e.g., zero/negative) raise ValueError; assume metric units; backup log as immutable text for auditing.
+
+|
+V
+
+[Manual User Action: Measure and Save Baseline TF (Iteration M=0)]
+|   // Atomic Detail Description: User configures Smaart v9 (pink noise or sweep, 1/12-oct smoothing, coherence check); sets DSP to flat/no corrections; positions mic per BTL map (2.5m equilateral from speakers, ear height ~1.2m); triggers measurement; saves tab-delimited text file 'TF_Iteration_0.txt' with headers [Frequency, Magnitude, Phase, Coherence].
+|   // Inputs: Smaart v9 setup (Scarlet 2i2, Earthworks M23 mic, Lab.gruppen DSP flat).
+|   // Outputs: 'TF_Iteration_0.txt' file.
+|   // Mathematical Equations: Measured TF mag(f) = 20 log10 |response/ref| (dB); phase unwrapped (deg); coherence = |S_{xy}|^2 / (S_{xx} S_{yy}) (0-1, cross/auto-spectra).
+|   // Code Steps (Python): # No execution; user manual action. Post-save validation: tf_data = np.loadtxt('TF_Iteration_0.txt', skiprows=1); freq, mag, phase, coh = tf_data.T; valid_coh = np.mean(coh) > 0.9; if not valid_coh: print("Warning: Low coherence; re-measure"); log_file.write(f"Baseline TF: Freq range {freq.min()}-{freq.max()} Hz, Avg Coh {np.mean(coh):.2f}\n")
+|   // Professional Expert Commentary: Baseline TF captures uncorrected distortions (e.g., baffle diffraction boosts/cuts ~200-2000 Hz); research implication: Provides empirical data for DADI inverse, validating reciprocity in real environments; human measurement ensures control in development phase.
+|   // Archival Backup Notes: Store file in dedicated folder 'TF_Files/'; edge case: Incomplete file (e.g., low coh) prompts re-measure; assume log-freq sampling for audio range.
+
+|
+V
+
+[Step 1: Load Current TF File for Iteration M]
+|   // Atomic Detail Description: Load Smaart v9 exported text file for current iteration; validate data integrity (e.g., increasing freq, coh >0.9 avg); atomic data ingestion step.
+|   // Inputs: File 'TF_Iteration_M.txt' (M from 0).
+|   // Outputs: tf_data (Nx4 array: freq, mag, phase, coh).
+|   // Mathematical Equations: None direct; later use mag for G_dim extraction.
+|   // Code Steps (Python): current_file = f'TF_Iteration_{M}.txt'; tf_data = np.loadtxt(current_file, skiprows=1); freq, mag, phase, coh = tf_data.T; if not np.all(np.diff(freq) > 0): raise ValueError("Freq not increasing"); avg_coh = np.mean(coh); if avg_coh < 0.9: print("Warning: Avg Coh {avg_coh:.2f} <0.9; consider re-measure"); log_file.write(f"Iter {M}: Loaded TF, Avg Coh {avg_coh:.2f}\n"); print(f"Loaded TF for Iter {M}: {len(freq)} points")
+|   // Professional Expert Commentary: Loading ensures data quality; research implication: Coherence filters noise for accurate inference; manual file naming maintains human traceability in testing phase.
+|   // Archival Backup Notes: Copy file to backup dir; edge case: Missing header assume columns order; log load time.
+
+|
+V
+
+[Step 2: DADI - Inverse Inference of Apparent Dimensions from TF]
+|   // Atomic Detail Description: Partition TF freq into 3 bands (around expected Fc); extract mean mag (dB) per band as G_dim (using coh-weighted average for robustness); iterate inverse update per dim to refine apparent dims from initial/prior; atomic inversion computation.
+|   // Inputs: tf_data (from Step 1), dims (initial or refined from prior iter).
+|   // Outputs: dims_inferred (updated 3-vector).
+|   // Mathematical Equations: band_edges ≈ [20, mean(Fc), max(Fc), 20000] or linspace(min(freq), max(freq), 4); valid_mask = coh >0.9; G_dim,i = sum(mag[band_i & valid_mask] * coh[band_i & valid_mask]) / sum(coh[band_i & valid_mask]) (weighted mean for noise robustness); dims_{n+1,i} = G_dim,i * (dims_{n,i} * r) / c; repeat n_steps=5 (empirical for <1% error); convergence ||e_k|| <= k^k ||e_0||, k=1 - \mu/L ~0.9 (Theorem 4.1, \mu=1, L=10 approx).
+|   // Code Steps (Python): def dadi_inverse(tf_data, dims, r=1.02, n_steps=5): freq, mag, _, coh = tf_data.T; valid_mask = coh > 0.9; N = len(dims); band_edges = np.linspace(freq[0], freq[-1], N + 1); G_dim = np.zeros(N); for i in range(N): band_mask = (freq >= band_edges[i]) & (freq < band_edges[i+1]) & valid_mask; if np.any(band_mask): weights = coh[band_mask]; G_dim[i] = np.sum(mag[band_mask] * weights) / np.sum(weights); else: G_dim[i] = 0; for _ in range(n_steps): dims = G_dim * (dims * r) / c; return dims; dims_inferred = dadi_inverse(tf_data, dims); log_file.write(f"Iter {M}: G_dim {G_dim}, Inferred Dims {dims_inferred}\n"); print("Inferred Dims:", dims_inferred)
+|   // Professional Expert Commentary: Weighted G_dim enhances noise robustness (stochastic Corollary 4.2: error O(\nu^2 / \mu)); research implication: Infers aberrations empirically, enabling regime adaptation; manual TF input ensures human verification in development.
+|   // Archival Backup Notes: Log G_dim and inferred per iter; edge case: No valid points per band use global weighted mean; validate error reduction vs. prior dims.
+
+|
+V
+
+[Step 3: Compute Dominance D from Inferred Dims]
+|   // Atomic Detail Description: Recalculate D from dims_inferred; atomic asymmetry metric recompute.
+|   // Inputs: dims_inferred (from Step 2).
+|   // Outputs: D (scalar).
+|   // Mathematical Equations: D = max(dims_inferred) / min(dims_inferred) + 1e-12 (avoid div-zero).
+|   // Code Steps (Python): D = np.max(dims_inferred) / (np.min(dims_inferred) + 1e-12); log_file.write(f"Iter {M}: D {D:.4f}\n"); print("D:", D)
+|   // Professional Expert Commentary: Re-D from inferred enables adaptive regime; research: Sensitivity-tuned for blending efficiency.
+|   // Archival Backup Notes: Log D; edge: Uniform dims D=1.
+
+|
+V
+
+[Step 4: Classify Regime and Compute Beta from D]
+|   // Atomic Detail Description: Classify based on D thresholds; compute clipped beta; atomic blending parameter.
+|   // Inputs: D (from Step 3).
+|   // Outputs: regime (str), beta (scalar [0,1]).
+|   // Mathematical Equations: if D <1.5: regime='short', beta=0; elif 1.5<=D<=2: 'hybrid', beta=2*(D-1.5); else 'long', beta=1; beta = min(1, max(0, beta)).
+|   // Code Steps (Python): if D < 1.5: regime, beta = 'short', 0.0; elif D <= 2: regime, beta = 'hybrid', 2*(D-1.5); else: regime, beta = 'long', 1.0; beta = min(1, max(0, beta)); log_file.write(f"Iter {M}: Regime {regime}, Beta {beta:.4f}\n"); print("Regime:", regime, "Beta:", beta)
+|   // Professional Expert Commentary: Beta ensures convex conservation (sum G = c, Theorem 4.3); research: Hybrid improves rate 20% (reduced kappa, Corollary 4.4).
+|   // Archival Backup Notes: Log regime/beta; edge: Boundary D=1.5/2 uses hybrid/long.
+
+|
+V
+
+[Step 5: DADC - Forward Compute Blended Gains and Cutoffs]
+|   // Atomic Detail Description: Apportion proportional/reciprocal gains from inferred dims; blend with beta; compute scalar Fc replicated; atomic forward model.
+|   // Inputs: dims_inferred (from Step 2), beta (from Step 4).
+|   // Outputs: G_aug (3-vector dB), Fc_aug (3-vector Hz).
+|   // Mathematical Equations: S = sum(dims_inferred); I_S = sum(1/dims_inferred +1e-12); G_prop = c * dims_inferred / S; G_rec = -c * (1/dims_inferred) / I_S; G_aug = beta * G_prop + (1-beta) * G_rec; Fc_scalar = fc_const / (beta * max(dims_inferred) + (1-beta) * min(dims_inferred) +1e-12); Fc_aug = Fc_scalar * [1,1,1].
+|   // Code Steps (Python): S = np.sum(dims_inferred); I_S = np.sum(1 / (dims_inferred + 1e-12)); G_prop = c * dims_inferred / (S + 1e-12); G_rec = -c * (1 / (dims_inferred + 1e-12)) / (I_S + 1e-12); G_aug = beta * G_prop + (1 - beta) * G_rec; Fc_scalar = fc_const / (beta * np.max(dims_inferred) + (1 - beta) * np.min(dims_inferred) + 1e-12); Fc_aug = Fc_scalar * np.ones_like(dims_inferred); log_file.write(f"Iter {M}: G_aug {G_aug}, Fc_aug {Fc_aug}\n"); print("G_aug:", G_aug, "Fc_aug:", Fc_aug)
+|   // Professional Expert Commentary: Forward simulates corrections; research: Blending conserves total step-up (Theorem 4.3); atomic for inverse verification.
+|   // Archival Backup Notes: Log vectors; edge: Small dims epsilon-stabilized; validate sum(|G_aug|) ≈ c.
+
+|
+V
+
+[Step 6: DARM - Augment Gains for Classic PEQ and Compute Fixed Q]
+|   // Atomic Detail Description: Modulate G_aug with D; clip; fixed Q for classic shelving; output PEQ triplet; atomic augmentation.
+|   // Inputs: G_aug, Fc_aug (from Step 5), D (from Step 3).
+|   // Outputs: G_darm (dB), Fc_darm (Hz), Q_fixed (scalar).
+|   // Mathematical Equations: Q_fixed = 1 / sinh((ln2 / 2) * 5.5) ≈ 0.304 (derived for 5.5-octave BW, fixed for classic PEQ); G_darm = clip(G_aug * (1 + 0.1*(D-1.5)), -12, 12) (D-emphasis for asymmetry).
+|   // Code Steps (Python): Q_fixed = 1 / np.sinh((np.log(2)/2) * 5.5); G_darm = np.clip(G_aug * (1 + 0.1 * (D - 1.5)), -12, 12); Fc_darm = Fc_aug; log_file.write(f"Iter {M}: G_darm {G_darm}, Fc_darm {Fc_darm}, Q_fixed {Q_fixed:.4f}\n"); print("Classic PEQ: G_darm", G_darm, "Fc_darm", Fc_darm, "Q_fixed", Q_fixed)
+|   // Professional Expert Commentary: Outputs pure classic PEQ for Lake v8.5.1; research: Modulation preserves conv (Theorem 4.4); fixed Q ensures manual simplicity in trials.
+|   // Archival Backup Notes: Export as 'PEQ_Output_Iteration_M.txt' (G Fc Q tab-delimited); edge: Clipping prevents DSP errors; no variable-Q here for pure classic focus.
+
+|
+V
+
+[Step 7: Manual User Applies Classic PEQ to Lake v8.5.1 DSP]
+|   // Atomic Detail Description: User manually enters PEQ into Lake Controller v8.5.1 (classic mode: add PEQ block, set gain=G_darm[i] dB, freq=Fc_darm[i] Hz, Q=Q_fixed for each i=0 to 2); verify entry; no automation.
+|   // Inputs: G_darm, Fc_darm, Q_fixed (from Step 6).
+|   // Outputs: DSP updated (manual confirmation).
+|   // Mathematical Equations: PEQ H(s) = product over i [G_i (s^2 + s w0_i / Q + w0_i^2) / (s^2 + s w0_i / (Q G_i) + w0_i^2 / G_i)], w0_i = 2 pi Fc_darm[i] (classic form for Lake).
+|   // Code Steps (Python): # No execution; user manual: Open Lake v8.5.1 web interface; for i in range(3): add PEQ, set Gain=G_darm[i], Freq=Fc_darm[i], Q=Q_fixed; print("User: Apply PEQ manually to Lake")
+|   // Professional Expert Commentary: Manual application ensures testing control; research: Classic PEQ validates core framework before custom; RMSE drop confirms efficacy.
+|   // Archival Backup Notes: Screenshot DSP settings; edge: If Lake error, check clip limits; log application time.
+
+|
+V
+
+[Step 8: Manual User Re-Measures TF with Smaart v9 and Saves File]
+|   // Atomic Detail Description: With PEQ applied, user re-runs Smaart v9 measurement (same setup as baseline); saves 'TF_Iteration_M+1.txt'; manual quality check (coh >0.9).
+|   // Inputs: DSP updated (from Step 7).
+|   // Outputs: New TF file.
+|   // Mathematical Equations: Re-measured mag/phase/coh as in Step 0; expect improved flatness.
+|   // Code Steps (Python): # Manual: User measures/saves; code prompt: input("Confirm re-measure and save 'TF_Iteration_{M+1}.txt'; press Enter")
+|   // Professional Expert Commentary: Re-measure closes loop; research: Empirical validation of <5% TF error; human oversight critical in development.
+|   // Archival Backup Notes: Archive new file; edge: Poor coh re-do; log room conditions (temp/hum).
+
+|
+V
+
+[Step 9: Load New TF and Compute RMSE for Convergence Check]
+|   // Atomic Detail Description: Load new file; compute coh-weighted RMSE vs. target; if <=0.05 dB, end; else M+=1, loop to Step 1.
+|   // Inputs: New file 'TF_Iteration_M+1.txt'.
+|   // Outputs: rmse (scalar); decision (end or loop).
+|   // Mathematical Equations: valid_mask = coh >0.9; rmse = sqrt(mean((mag[valid_mask] - 90)^2)); if rmse <=0.05: converge; else M +=1, loop.
+|   // Code Steps (Python): new_file = f'TF_Iteration_{M+1}.txt'; tf_data = np.loadtxt(new_file, skiprows=1); freq, mag, phase, coh = tf_data.T; valid_mask = coh > 0.9; rmse = np.sqrt(np.mean((mag[valid_mask] - 90)**2)) if np.any(valid_mask) else float('inf'); log_file.write(f"Iter {M+1}: RMSE {rmse:.4f} dB\n"); print("New RMSE:", rmse); if rmse <= 0.05: print("Converged; pipeline complete."); log_file.close(); # End else: M += 1; # Loop to Step 1 with updated TF as current
+|   // Professional Expert Commentary: RMSE quantifies linearity; research: Aligns with sim benchmarks (<0.05 dB); manual check builds trust in development phase.
+|   // Archival Backup Notes: Final log rmse; edge: Inf rmse re-measure; cap M at 10.
+
+End: Converged Classic PEQ Applied; Pipeline Complete
+|   // Atomic Detail Description: System ends with final PEQ in DSP; user verifies final TF; archive all.
+|   // Inputs: None.
+|   // Outputs: Final log.
+|   // Mathematical Equations: Final rmse <=0.05 dB confirms <5% TF error.
+|   // Code Steps (Python): print("Final Classic PEQ Applied: Gains", G_darm, "Fc", Fc_darm, "Q", Q_fixed); # User: Save DSP preset in Lake
+|   // Professional Expert Commentary: Manual process validated; research: Basis for future auto; achieves objectives (linearity, conv).
+|   // Archival Backup Notes: Full pipeline log; date Jan 07, 2026; version 1.0; author Peter Higgins; backup as PDF/text.

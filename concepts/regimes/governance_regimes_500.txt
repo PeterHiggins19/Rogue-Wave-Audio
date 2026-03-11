@@ -1,0 +1,501 @@
+ID	RegimeName	Category	ShortDescription	Region	ExampleCountry
+1	Regime 001	Nation-State Governance	Traditional state model with centralized authority #1	Africa	Nigeria
+2	Regime 002	Market-Dominant Governance	Economic-driven governance emphasizing market forces #2	Asia	India
+3	Regime 003	Algorithmic Governance	Automated decision systems guiding policy and regulation #3	Europe	France
+4	Regime 004	Nation-State Governance	Traditional state model with centralized authority #4	Americas	Mexico
+5	Regime 005	Market-Dominant Governance	Economic-driven governance emphasizing market forces #5	Oceania	Samoa
+6	Regime 006	Algorithmic Governance	Automated decision systems guiding policy and regulation #6	Global	European Union
+7	Regime 007	Nation-State Governance	Traditional state model with centralized authority #7	Africa	Kenya
+8	Regime 008	Market-Dominant Governance	Economic-driven governance emphasizing market forces #8	Asia	Japan
+9	Regime 009	Algorithmic Governance	Automated decision systems guiding policy and regulation #9	Europe	Italy
+10	Regime 010	Nation-State Governance	Traditional state model with centralized authority #10	Americas	Argentina
+11	Regime 011	Market-Dominant Governance	Economic-driven governance emphasizing market forces #11	Oceania	Australia
+12	Regime 012	Algorithmic Governance	Automated decision systems guiding policy and regulation #12	Global	United Nations
+13	Regime 013	Nation-State Governance	Traditional state model with centralized authority #13	Africa	South Africa
+14	Regime 014	Market-Dominant Governance	Economic-driven governance emphasizing market forces #14	Asia	South Korea
+15	Regime 015	Algorithmic Governance	Automated decision systems guiding policy and regulation #15	Europe	Spain
+16	Regime 016	Nation-State Governance	Traditional state model with centralized authority #16	Americas	United States
+17	Regime 017	Market-Dominant Governance	Economic-driven governance emphasizing market forces #17	Oceania	New Zealand
+18	Regime 018	Algorithmic Governance	Automated decision systems guiding policy and regulation #18	Global	Multinational Consortium
+19	Regime 019	Nation-State Governance	Traditional state model with centralized authority #19	Africa	Egypt
+20	Regime 020	Market-Dominant Governance	Economic-driven governance emphasizing market forces #20	Asia	Indonesia
+21	Regime 021	Algorithmic Governance	Automated decision systems guiding policy and regulation #21	Europe	United Kingdom
+22	Regime 022	Nation-State Governance	Traditional state model with centralized authority #22	Americas	Canada
+23	Regime 023	Market-Dominant Governance	Economic-driven governance emphasizing market forces #23	Oceania	Fiji
+24	Regime 024	Algorithmic Governance	Automated decision systems guiding policy and regulation #24	Global	Global Financial Forum
+25	Regime 025	Nation-State Governance	Traditional state model with centralized authority #25	Africa	Ghana
+26	Regime 026	Market-Dominant Governance	Economic-driven governance emphasizing market forces #26	Asia	China
+27	Regime 027	Algorithmic Governance	Automated decision systems guiding policy and regulation #27	Europe	Germany
+28	Regime 028	Nation-State Governance	Traditional state model with centralized authority #28	Americas	Brazil
+29	Regime 029	Market-Dominant Governance	Economic-driven governance emphasizing market forces #29	Oceania	Papua New Guinea
+30	Regime 030	Algorithmic Governance	Automated decision systems guiding policy and regulation #30	Global	International Coalition
+31	Regime 031	Nation-State Governance	Traditional state model with centralized authority #31	Africa	Nigeria
+32	Regime 032	Market-Dominant Governance	Economic-driven governance emphasizing market forces #32	Asia	India
+33	Regime 033	Algorithmic Governance	Automated decision systems guiding policy and regulation #33	Europe	France
+34	Regime 034	Nation-State Governance	Traditional state model with centralized authority #34	Americas	Mexico
+35	Regime 035	Market-Dominant Governance	Economic-driven governance emphasizing market forces #35	Oceania	Samoa
+36	Regime 036	Algorithmic Governance	Automated decision systems guiding policy and regulation #36	Global	European Union
+37	Regime 037	Nation-State Governance	Traditional state model with centralized authority #37	Africa	Kenya
+38	Regime 038	Market-Dominant Governance	Economic-driven governance emphasizing market forces #38	Asia	Japan
+39	Regime 039	Algorithmic Governance	Automated decision systems guiding policy and regulation #39	Europe	Italy
+40	Regime 040	Nation-State Governance	Traditional state model with centralized authority #40	Americas	Argentina
+41	Regime 041	Market-Dominant Governance	Economic-driven governance emphasizing market forces #41	Oceania	Australia
+42	Regime 042	Algorithmic Governance	Automated decision systems guiding policy and regulation #42	Global	United Nations
+43	Regime 043	Nation-State Governance	Traditional state model with centralized authority #43	Africa	South Africa
+44	Regime 044	Market-Dominant Governance	Economic-driven governance emphasizing market forces #44	Asia	South Korea
+45	Regime 045	Algorithmic Governance	Automated decision systems guiding policy and regulation #45	Europe	Spain
+46	Regime 046	Nation-State Governance	Traditional state model with centralized authority #46	Americas	United States
+47	Regime 047	Market-Dominant Governance	Economic-driven governance emphasizing market forces #47	Oceania	New Zealand
+48	Regime 048	Algorithmic Governance	Automated decision systems guiding policy and regulation #48	Global	Multinational Consortium
+49	Regime 049	Nation-State Governance	Traditional state model with centralized authority #49	Africa	Egypt
+50	Regime 050	Market-Dominant Governance	Economic-driven governance emphasizing market forces #50	Asia	Indonesia
+51	Regime 051	Algorithmic Governance	Automated decision systems guiding policy and regulation #51	Europe	United Kingdom
+52	Regime 052	Nation-State Governance	Traditional state model with centralized authority #52	Americas	Canada
+53	Regime 053	Market-Dominant Governance	Economic-driven governance emphasizing market forces #53	Oceania	Fiji
+54	Regime 054	Algorithmic Governance	Automated decision systems guiding policy and regulation #54	Global	Global Financial Forum
+55	Regime 055	Nation-State Governance	Traditional state model with centralized authority #55	Africa	Ghana
+56	Regime 056	Market-Dominant Governance	Economic-driven governance emphasizing market forces #56	Asia	China
+57	Regime 057	Algorithmic Governance	Automated decision systems guiding policy and regulation #57	Europe	Germany
+58	Regime 058	Nation-State Governance	Traditional state model with centralized authority #58	Americas	Brazil
+59	Regime 059	Market-Dominant Governance	Economic-driven governance emphasizing market forces #59	Oceania	Papua New Guinea
+60	Regime 060	Algorithmic Governance	Automated decision systems guiding policy and regulation #60	Global	International Coalition
+61	Regime 061	Nation-State Governance	Traditional state model with centralized authority #61	Africa	Nigeria
+62	Regime 062	Market-Dominant Governance	Economic-driven governance emphasizing market forces #62	Asia	India
+63	Regime 063	Algorithmic Governance	Automated decision systems guiding policy and regulation #63	Europe	France
+64	Regime 064	Nation-State Governance	Traditional state model with centralized authority #64	Americas	Mexico
+65	Regime 065	Market-Dominant Governance	Economic-driven governance emphasizing market forces #65	Oceania	Samoa
+66	Regime 066	Algorithmic Governance	Automated decision systems guiding policy and regulation #66	Global	European Union
+67	Regime 067	Nation-State Governance	Traditional state model with centralized authority #67	Africa	Kenya
+68	Regime 068	Market-Dominant Governance	Economic-driven governance emphasizing market forces #68	Asia	Japan
+69	Regime 069	Algorithmic Governance	Automated decision systems guiding policy and regulation #69	Europe	Italy
+70	Regime 070	Nation-State Governance	Traditional state model with centralized authority #70	Americas	Argentina
+71	Regime 071	Market-Dominant Governance	Economic-driven governance emphasizing market forces #71	Oceania	Australia
+72	Regime 072	Algorithmic Governance	Automated decision systems guiding policy and regulation #72	Global	United Nations
+73	Regime 073	Nation-State Governance	Traditional state model with centralized authority #73	Africa	South Africa
+74	Regime 074	Market-Dominant Governance	Economic-driven governance emphasizing market forces #74	Asia	South Korea
+75	Regime 075	Algorithmic Governance	Automated decision systems guiding policy and regulation #75	Europe	Spain
+76	Regime 076	Nation-State Governance	Traditional state model with centralized authority #76	Americas	United States
+77	Regime 077	Market-Dominant Governance	Economic-driven governance emphasizing market forces #77	Oceania	New Zealand
+78	Regime 078	Algorithmic Governance	Automated decision systems guiding policy and regulation #78	Global	Multinational Consortium
+79	Regime 079	Nation-State Governance	Traditional state model with centralized authority #79	Africa	Egypt
+80	Regime 080	Market-Dominant Governance	Economic-driven governance emphasizing market forces #80	Asia	Indonesia
+81	Regime 081	Algorithmic Governance	Automated decision systems guiding policy and regulation #81	Europe	United Kingdom
+82	Regime 082	Nation-State Governance	Traditional state model with centralized authority #82	Americas	Canada
+83	Regime 083	Market-Dominant Governance	Economic-driven governance emphasizing market forces #83	Oceania	Fiji
+84	Regime 084	Algorithmic Governance	Automated decision systems guiding policy and regulation #84	Global	Global Financial Forum
+85	Regime 085	Nation-State Governance	Traditional state model with centralized authority #85	Africa	Ghana
+86	Regime 086	Market-Dominant Governance	Economic-driven governance emphasizing market forces #86	Asia	China
+87	Regime 087	Algorithmic Governance	Automated decision systems guiding policy and regulation #87	Europe	Germany
+88	Regime 088	Nation-State Governance	Traditional state model with centralized authority #88	Americas	Brazil
+89	Regime 089	Market-Dominant Governance	Economic-driven governance emphasizing market forces #89	Oceania	Papua New Guinea
+90	Regime 090	Algorithmic Governance	Automated decision systems guiding policy and regulation #90	Global	International Coalition
+91	Regime 091	Nation-State Governance	Traditional state model with centralized authority #91	Africa	Nigeria
+92	Regime 092	Market-Dominant Governance	Economic-driven governance emphasizing market forces #92	Asia	India
+93	Regime 093	Algorithmic Governance	Automated decision systems guiding policy and regulation #93	Europe	France
+94	Regime 094	Nation-State Governance	Traditional state model with centralized authority #94	Americas	Mexico
+95	Regime 095	Market-Dominant Governance	Economic-driven governance emphasizing market forces #95	Oceania	Samoa
+96	Regime 096	Algorithmic Governance	Automated decision systems guiding policy and regulation #96	Global	European Union
+97	Regime 097	Nation-State Governance	Traditional state model with centralized authority #97	Africa	Kenya
+98	Regime 098	Market-Dominant Governance	Economic-driven governance emphasizing market forces #98	Asia	Japan
+99	Regime 099	Algorithmic Governance	Automated decision systems guiding policy and regulation #99	Europe	Italy
+100	Regime 100	Nation-State Governance	Traditional state model with centralized authority #100	Americas	Argentina
+101	Regime 101	Market-Dominant Governance	Economic-driven governance emphasizing market forces #101	Oceania	Australia
+102	Regime 102	Algorithmic Governance	Automated decision systems guiding policy and regulation #102	Global	United Nations
+103	Regime 103	Nation-State Governance	Traditional state model with centralized authority #103	Africa	South Africa
+104	Regime 104	Market-Dominant Governance	Economic-driven governance emphasizing market forces #104	Asia	South Korea
+105	Regime 105	Algorithmic Governance	Automated decision systems guiding policy and regulation #105	Europe	Spain
+106	Regime 106	Nation-State Governance	Traditional state model with centralized authority #106	Americas	United States
+107	Regime 107	Market-Dominant Governance	Economic-driven governance emphasizing market forces #107	Oceania	New Zealand
+108	Regime 108	Algorithmic Governance	Automated decision systems guiding policy and regulation #108	Global	Multinational Consortium
+109	Regime 109	Nation-State Governance	Traditional state model with centralized authority #109	Africa	Egypt
+110	Regime 110	Market-Dominant Governance	Economic-driven governance emphasizing market forces #110	Asia	Indonesia
+111	Regime 111	Algorithmic Governance	Automated decision systems guiding policy and regulation #111	Europe	United Kingdom
+112	Regime 112	Nation-State Governance	Traditional state model with centralized authority #112	Americas	Canada
+113	Regime 113	Market-Dominant Governance	Economic-driven governance emphasizing market forces #113	Oceania	Fiji
+114	Regime 114	Algorithmic Governance	Automated decision systems guiding policy and regulation #114	Global	Global Financial Forum
+115	Regime 115	Nation-State Governance	Traditional state model with centralized authority #115	Africa	Ghana
+116	Regime 116	Market-Dominant Governance	Economic-driven governance emphasizing market forces #116	Asia	China
+117	Regime 117	Algorithmic Governance	Automated decision systems guiding policy and regulation #117	Europe	Germany
+118	Regime 118	Nation-State Governance	Traditional state model with centralized authority #118	Americas	Brazil
+119	Regime 119	Market-Dominant Governance	Economic-driven governance emphasizing market forces #119	Oceania	Papua New Guinea
+120	Regime 120	Algorithmic Governance	Automated decision systems guiding policy and regulation #120	Global	International Coalition
+121	Regime 121	Nation-State Governance	Traditional state model with centralized authority #121	Africa	Nigeria
+122	Regime 122	Market-Dominant Governance	Economic-driven governance emphasizing market forces #122	Asia	India
+123	Regime 123	Algorithmic Governance	Automated decision systems guiding policy and regulation #123	Europe	France
+124	Regime 124	Nation-State Governance	Traditional state model with centralized authority #124	Americas	Mexico
+125	Regime 125	Market-Dominant Governance	Economic-driven governance emphasizing market forces #125	Oceania	Samoa
+126	Regime 126	Algorithmic Governance	Automated decision systems guiding policy and regulation #126	Global	European Union
+127	Regime 127	Nation-State Governance	Traditional state model with centralized authority #127	Africa	Kenya
+128	Regime 128	Market-Dominant Governance	Economic-driven governance emphasizing market forces #128	Asia	Japan
+129	Regime 129	Algorithmic Governance	Automated decision systems guiding policy and regulation #129	Europe	Italy
+130	Regime 130	Nation-State Governance	Traditional state model with centralized authority #130	Americas	Argentina
+131	Regime 131	Market-Dominant Governance	Economic-driven governance emphasizing market forces #131	Oceania	Australia
+132	Regime 132	Algorithmic Governance	Automated decision systems guiding policy and regulation #132	Global	United Nations
+133	Regime 133	Nation-State Governance	Traditional state model with centralized authority #133	Africa	South Africa
+134	Regime 134	Market-Dominant Governance	Economic-driven governance emphasizing market forces #134	Asia	South Korea
+135	Regime 135	Algorithmic Governance	Automated decision systems guiding policy and regulation #135	Europe	Spain
+136	Regime 136	Nation-State Governance	Traditional state model with centralized authority #136	Americas	United States
+137	Regime 137	Market-Dominant Governance	Economic-driven governance emphasizing market forces #137	Oceania	New Zealand
+138	Regime 138	Algorithmic Governance	Automated decision systems guiding policy and regulation #138	Global	Multinational Consortium
+139	Regime 139	Nation-State Governance	Traditional state model with centralized authority #139	Africa	Egypt
+140	Regime 140	Market-Dominant Governance	Economic-driven governance emphasizing market forces #140	Asia	Indonesia
+141	Regime 141	Algorithmic Governance	Automated decision systems guiding policy and regulation #141	Europe	United Kingdom
+142	Regime 142	Nation-State Governance	Traditional state model with centralized authority #142	Americas	Canada
+143	Regime 143	Market-Dominant Governance	Economic-driven governance emphasizing market forces #143	Oceania	Fiji
+144	Regime 144	Algorithmic Governance	Automated decision systems guiding policy and regulation #144	Global	Global Financial Forum
+145	Regime 145	Nation-State Governance	Traditional state model with centralized authority #145	Africa	Ghana
+146	Regime 146	Market-Dominant Governance	Economic-driven governance emphasizing market forces #146	Asia	China
+147	Regime 147	Algorithmic Governance	Automated decision systems guiding policy and regulation #147	Europe	Germany
+148	Regime 148	Nation-State Governance	Traditional state model with centralized authority #148	Americas	Brazil
+149	Regime 149	Market-Dominant Governance	Economic-driven governance emphasizing market forces #149	Oceania	Papua New Guinea
+150	Regime 150	Algorithmic Governance	Automated decision systems guiding policy and regulation #150	Global	International Coalition
+151	Regime 151	Nation-State Governance	Traditional state model with centralized authority #151	Africa	Nigeria
+152	Regime 152	Market-Dominant Governance	Economic-driven governance emphasizing market forces #152	Asia	India
+153	Regime 153	Algorithmic Governance	Automated decision systems guiding policy and regulation #153	Europe	France
+154	Regime 154	Nation-State Governance	Traditional state model with centralized authority #154	Americas	Mexico
+155	Regime 155	Market-Dominant Governance	Economic-driven governance emphasizing market forces #155	Oceania	Samoa
+156	Regime 156	Algorithmic Governance	Automated decision systems guiding policy and regulation #156	Global	European Union
+157	Regime 157	Nation-State Governance	Traditional state model with centralized authority #157	Africa	Kenya
+158	Regime 158	Market-Dominant Governance	Economic-driven governance emphasizing market forces #158	Asia	Japan
+159	Regime 159	Algorithmic Governance	Automated decision systems guiding policy and regulation #159	Europe	Italy
+160	Regime 160	Nation-State Governance	Traditional state model with centralized authority #160	Americas	Argentina
+161	Regime 161	Market-Dominant Governance	Economic-driven governance emphasizing market forces #161	Oceania	Australia
+162	Regime 162	Algorithmic Governance	Automated decision systems guiding policy and regulation #162	Global	United Nations
+163	Regime 163	Nation-State Governance	Traditional state model with centralized authority #163	Africa	South Africa
+164	Regime 164	Market-Dominant Governance	Economic-driven governance emphasizing market forces #164	Asia	South Korea
+165	Regime 165	Algorithmic Governance	Automated decision systems guiding policy and regulation #165	Europe	Spain
+166	Regime 166	Nation-State Governance	Traditional state model with centralized authority #166	Americas	United States
+167	Regime 167	Market-Dominant Governance	Economic-driven governance emphasizing market forces #167	Oceania	New Zealand
+168	Regime 168	Algorithmic Governance	Automated decision systems guiding policy and regulation #168	Global	Multinational Consortium
+169	Regime 169	Nation-State Governance	Traditional state model with centralized authority #169	Africa	Egypt
+170	Regime 170	Market-Dominant Governance	Economic-driven governance emphasizing market forces #170	Asia	Indonesia
+171	Regime 171	Algorithmic Governance	Automated decision systems guiding policy and regulation #171	Europe	United Kingdom
+172	Regime 172	Nation-State Governance	Traditional state model with centralized authority #172	Americas	Canada
+173	Regime 173	Market-Dominant Governance	Economic-driven governance emphasizing market forces #173	Oceania	Fiji
+174	Regime 174	Algorithmic Governance	Automated decision systems guiding policy and regulation #174	Global	Global Financial Forum
+175	Regime 175	Nation-State Governance	Traditional state model with centralized authority #175	Africa	Ghana
+176	Regime 176	Market-Dominant Governance	Economic-driven governance emphasizing market forces #176	Asia	China
+177	Regime 177	Algorithmic Governance	Automated decision systems guiding policy and regulation #177	Europe	Germany
+178	Regime 178	Nation-State Governance	Traditional state model with centralized authority #178	Americas	Brazil
+179	Regime 179	Market-Dominant Governance	Economic-driven governance emphasizing market forces #179	Oceania	Papua New Guinea
+180	Regime 180	Algorithmic Governance	Automated decision systems guiding policy and regulation #180	Global	International Coalition
+181	Regime 181	Nation-State Governance	Traditional state model with centralized authority #181	Africa	Nigeria
+182	Regime 182	Market-Dominant Governance	Economic-driven governance emphasizing market forces #182	Asia	India
+183	Regime 183	Algorithmic Governance	Automated decision systems guiding policy and regulation #183	Europe	France
+184	Regime 184	Nation-State Governance	Traditional state model with centralized authority #184	Americas	Mexico
+185	Regime 185	Market-Dominant Governance	Economic-driven governance emphasizing market forces #185	Oceania	Samoa
+186	Regime 186	Algorithmic Governance	Automated decision systems guiding policy and regulation #186	Global	European Union
+187	Regime 187	Nation-State Governance	Traditional state model with centralized authority #187	Africa	Kenya
+188	Regime 188	Market-Dominant Governance	Economic-driven governance emphasizing market forces #188	Asia	Japan
+189	Regime 189	Algorithmic Governance	Automated decision systems guiding policy and regulation #189	Europe	Italy
+190	Regime 190	Nation-State Governance	Traditional state model with centralized authority #190	Americas	Argentina
+191	Regime 191	Market-Dominant Governance	Economic-driven governance emphasizing market forces #191	Oceania	Australia
+192	Regime 192	Algorithmic Governance	Automated decision systems guiding policy and regulation #192	Global	United Nations
+193	Regime 193	Nation-State Governance	Traditional state model with centralized authority #193	Africa	South Africa
+194	Regime 194	Market-Dominant Governance	Economic-driven governance emphasizing market forces #194	Asia	South Korea
+195	Regime 195	Algorithmic Governance	Automated decision systems guiding policy and regulation #195	Europe	Spain
+196	Regime 196	Nation-State Governance	Traditional state model with centralized authority #196	Americas	United States
+197	Regime 197	Market-Dominant Governance	Economic-driven governance emphasizing market forces #197	Oceania	New Zealand
+198	Regime 198	Algorithmic Governance	Automated decision systems guiding policy and regulation #198	Global	Multinational Consortium
+199	Regime 199	Nation-State Governance	Traditional state model with centralized authority #199	Africa	Egypt
+200	Regime 200	Market-Dominant Governance	Economic-driven governance emphasizing market forces #200	Asia	Indonesia
+201	Regime 201	Algorithmic Governance	Automated decision systems guiding policy and regulation #201	Europe	United Kingdom
+202	Regime 202	Nation-State Governance	Traditional state model with centralized authority #202	Americas	Canada
+203	Regime 203	Market-Dominant Governance	Economic-driven governance emphasizing market forces #203	Oceania	Fiji
+204	Regime 204	Algorithmic Governance	Automated decision systems guiding policy and regulation #204	Global	Global Financial Forum
+205	Regime 205	Nation-State Governance	Traditional state model with centralized authority #205	Africa	Ghana
+206	Regime 206	Market-Dominant Governance	Economic-driven governance emphasizing market forces #206	Asia	China
+207	Regime 207	Algorithmic Governance	Automated decision systems guiding policy and regulation #207	Europe	Germany
+208	Regime 208	Nation-State Governance	Traditional state model with centralized authority #208	Americas	Brazil
+209	Regime 209	Market-Dominant Governance	Economic-driven governance emphasizing market forces #209	Oceania	Papua New Guinea
+210	Regime 210	Algorithmic Governance	Automated decision systems guiding policy and regulation #210	Global	International Coalition
+211	Regime 211	Nation-State Governance	Traditional state model with centralized authority #211	Africa	Nigeria
+212	Regime 212	Market-Dominant Governance	Economic-driven governance emphasizing market forces #212	Asia	India
+213	Regime 213	Algorithmic Governance	Automated decision systems guiding policy and regulation #213	Europe	France
+214	Regime 214	Nation-State Governance	Traditional state model with centralized authority #214	Americas	Mexico
+215	Regime 215	Market-Dominant Governance	Economic-driven governance emphasizing market forces #215	Oceania	Samoa
+216	Regime 216	Algorithmic Governance	Automated decision systems guiding policy and regulation #216	Global	European Union
+217	Regime 217	Nation-State Governance	Traditional state model with centralized authority #217	Africa	Kenya
+218	Regime 218	Market-Dominant Governance	Economic-driven governance emphasizing market forces #218	Asia	Japan
+219	Regime 219	Algorithmic Governance	Automated decision systems guiding policy and regulation #219	Europe	Italy
+220	Regime 220	Nation-State Governance	Traditional state model with centralized authority #220	Americas	Argentina
+221	Regime 221	Market-Dominant Governance	Economic-driven governance emphasizing market forces #221	Oceania	Australia
+222	Regime 222	Algorithmic Governance	Automated decision systems guiding policy and regulation #222	Global	United Nations
+223	Regime 223	Nation-State Governance	Traditional state model with centralized authority #223	Africa	South Africa
+224	Regime 224	Market-Dominant Governance	Economic-driven governance emphasizing market forces #224	Asia	South Korea
+225	Regime 225	Algorithmic Governance	Automated decision systems guiding policy and regulation #225	Europe	Spain
+226	Regime 226	Nation-State Governance	Traditional state model with centralized authority #226	Americas	United States
+227	Regime 227	Market-Dominant Governance	Economic-driven governance emphasizing market forces #227	Oceania	New Zealand
+228	Regime 228	Algorithmic Governance	Automated decision systems guiding policy and regulation #228	Global	Multinational Consortium
+229	Regime 229	Nation-State Governance	Traditional state model with centralized authority #229	Africa	Egypt
+230	Regime 230	Market-Dominant Governance	Economic-driven governance emphasizing market forces #230	Asia	Indonesia
+231	Regime 231	Algorithmic Governance	Automated decision systems guiding policy and regulation #231	Europe	United Kingdom
+232	Regime 232	Nation-State Governance	Traditional state model with centralized authority #232	Americas	Canada
+233	Regime 233	Market-Dominant Governance	Economic-driven governance emphasizing market forces #233	Oceania	Fiji
+234	Regime 234	Algorithmic Governance	Automated decision systems guiding policy and regulation #234	Global	Global Financial Forum
+235	Regime 235	Nation-State Governance	Traditional state model with centralized authority #235	Africa	Ghana
+236	Regime 236	Market-Dominant Governance	Economic-driven governance emphasizing market forces #236	Asia	China
+237	Regime 237	Algorithmic Governance	Automated decision systems guiding policy and regulation #237	Europe	Germany
+238	Regime 238	Nation-State Governance	Traditional state model with centralized authority #238	Americas	Brazil
+239	Regime 239	Market-Dominant Governance	Economic-driven governance emphasizing market forces #239	Oceania	Papua New Guinea
+240	Regime 240	Algorithmic Governance	Automated decision systems guiding policy and regulation #240	Global	International Coalition
+241	Regime 241	Nation-State Governance	Traditional state model with centralized authority #241	Africa	Nigeria
+242	Regime 242	Market-Dominant Governance	Economic-driven governance emphasizing market forces #242	Asia	India
+243	Regime 243	Algorithmic Governance	Automated decision systems guiding policy and regulation #243	Europe	France
+244	Regime 244	Nation-State Governance	Traditional state model with centralized authority #244	Americas	Mexico
+245	Regime 245	Market-Dominant Governance	Economic-driven governance emphasizing market forces #245	Oceania	Samoa
+246	Regime 246	Algorithmic Governance	Automated decision systems guiding policy and regulation #246	Global	European Union
+247	Regime 247	Nation-State Governance	Traditional state model with centralized authority #247	Africa	Kenya
+248	Regime 248	Market-Dominant Governance	Economic-driven governance emphasizing market forces #248	Asia	Japan
+249	Regime 249	Algorithmic Governance	Automated decision systems guiding policy and regulation #249	Europe	Italy
+250	Regime 250	Nation-State Governance	Traditional state model with centralized authority #250	Americas	Argentina
+251	Regime 251	Market-Dominant Governance	Economic-driven governance emphasizing market forces #251	Oceania	Australia
+252	Regime 252	Algorithmic Governance	Automated decision systems guiding policy and regulation #252	Global	United Nations
+253	Regime 253	Nation-State Governance	Traditional state model with centralized authority #253	Africa	South Africa
+254	Regime 254	Market-Dominant Governance	Economic-driven governance emphasizing market forces #254	Asia	South Korea
+255	Regime 255	Algorithmic Governance	Automated decision systems guiding policy and regulation #255	Europe	Spain
+256	Regime 256	Nation-State Governance	Traditional state model with centralized authority #256	Americas	United States
+257	Regime 257	Market-Dominant Governance	Economic-driven governance emphasizing market forces #257	Oceania	New Zealand
+258	Regime 258	Algorithmic Governance	Automated decision systems guiding policy and regulation #258	Global	Multinational Consortium
+259	Regime 259	Nation-State Governance	Traditional state model with centralized authority #259	Africa	Egypt
+260	Regime 260	Market-Dominant Governance	Economic-driven governance emphasizing market forces #260	Asia	Indonesia
+261	Regime 261	Algorithmic Governance	Automated decision systems guiding policy and regulation #261	Europe	United Kingdom
+262	Regime 262	Nation-State Governance	Traditional state model with centralized authority #262	Americas	Canada
+263	Regime 263	Market-Dominant Governance	Economic-driven governance emphasizing market forces #263	Oceania	Fiji
+264	Regime 264	Algorithmic Governance	Automated decision systems guiding policy and regulation #264	Global	Global Financial Forum
+265	Regime 265	Nation-State Governance	Traditional state model with centralized authority #265	Africa	Ghana
+266	Regime 266	Market-Dominant Governance	Economic-driven governance emphasizing market forces #266	Asia	China
+267	Regime 267	Algorithmic Governance	Automated decision systems guiding policy and regulation #267	Europe	Germany
+268	Regime 268	Nation-State Governance	Traditional state model with centralized authority #268	Americas	Brazil
+269	Regime 269	Market-Dominant Governance	Economic-driven governance emphasizing market forces #269	Oceania	Papua New Guinea
+270	Regime 270	Algorithmic Governance	Automated decision systems guiding policy and regulation #270	Global	International Coalition
+271	Regime 271	Nation-State Governance	Traditional state model with centralized authority #271	Africa	Nigeria
+272	Regime 272	Market-Dominant Governance	Economic-driven governance emphasizing market forces #272	Asia	India
+273	Regime 273	Algorithmic Governance	Automated decision systems guiding policy and regulation #273	Europe	France
+274	Regime 274	Nation-State Governance	Traditional state model with centralized authority #274	Americas	Mexico
+275	Regime 275	Market-Dominant Governance	Economic-driven governance emphasizing market forces #275	Oceania	Samoa
+276	Regime 276	Algorithmic Governance	Automated decision systems guiding policy and regulation #276	Global	European Union
+277	Regime 277	Nation-State Governance	Traditional state model with centralized authority #277	Africa	Kenya
+278	Regime 278	Market-Dominant Governance	Economic-driven governance emphasizing market forces #278	Asia	Japan
+279	Regime 279	Algorithmic Governance	Automated decision systems guiding policy and regulation #279	Europe	Italy
+280	Regime 280	Nation-State Governance	Traditional state model with centralized authority #280	Americas	Argentina
+281	Regime 281	Market-Dominant Governance	Economic-driven governance emphasizing market forces #281	Oceania	Australia
+282	Regime 282	Algorithmic Governance	Automated decision systems guiding policy and regulation #282	Global	United Nations
+283	Regime 283	Nation-State Governance	Traditional state model with centralized authority #283	Africa	South Africa
+284	Regime 284	Market-Dominant Governance	Economic-driven governance emphasizing market forces #284	Asia	South Korea
+285	Regime 285	Algorithmic Governance	Automated decision systems guiding policy and regulation #285	Europe	Spain
+286	Regime 286	Nation-State Governance	Traditional state model with centralized authority #286	Americas	United States
+287	Regime 287	Market-Dominant Governance	Economic-driven governance emphasizing market forces #287	Oceania	New Zealand
+288	Regime 288	Algorithmic Governance	Automated decision systems guiding policy and regulation #288	Global	Multinational Consortium
+289	Regime 289	Nation-State Governance	Traditional state model with centralized authority #289	Africa	Egypt
+290	Regime 290	Market-Dominant Governance	Economic-driven governance emphasizing market forces #290	Asia	Indonesia
+291	Regime 291	Algorithmic Governance	Automated decision systems guiding policy and regulation #291	Europe	United Kingdom
+292	Regime 292	Nation-State Governance	Traditional state model with centralized authority #292	Americas	Canada
+293	Regime 293	Market-Dominant Governance	Economic-driven governance emphasizing market forces #293	Oceania	Fiji
+294	Regime 294	Algorithmic Governance	Automated decision systems guiding policy and regulation #294	Global	Global Financial Forum
+295	Regime 295	Nation-State Governance	Traditional state model with centralized authority #295	Africa	Ghana
+296	Regime 296	Market-Dominant Governance	Economic-driven governance emphasizing market forces #296	Asia	China
+297	Regime 297	Algorithmic Governance	Automated decision systems guiding policy and regulation #297	Europe	Germany
+298	Regime 298	Nation-State Governance	Traditional state model with centralized authority #298	Americas	Brazil
+299	Regime 299	Market-Dominant Governance	Economic-driven governance emphasizing market forces #299	Oceania	Papua New Guinea
+300	Regime 300	Algorithmic Governance	Automated decision systems guiding policy and regulation #300	Global	International Coalition
+301	Regime 301	Nation-State Governance	Traditional state model with centralized authority #301	Africa	Nigeria
+302	Regime 302	Market-Dominant Governance	Economic-driven governance emphasizing market forces #302	Asia	India
+303	Regime 303	Algorithmic Governance	Automated decision systems guiding policy and regulation #303	Europe	France
+304	Regime 304	Nation-State Governance	Traditional state model with centralized authority #304	Americas	Mexico
+305	Regime 305	Market-Dominant Governance	Economic-driven governance emphasizing market forces #305	Oceania	Samoa
+306	Regime 306	Algorithmic Governance	Automated decision systems guiding policy and regulation #306	Global	European Union
+307	Regime 307	Nation-State Governance	Traditional state model with centralized authority #307	Africa	Kenya
+308	Regime 308	Market-Dominant Governance	Economic-driven governance emphasizing market forces #308	Asia	Japan
+309	Regime 309	Algorithmic Governance	Automated decision systems guiding policy and regulation #309	Europe	Italy
+310	Regime 310	Nation-State Governance	Traditional state model with centralized authority #310	Americas	Argentina
+311	Regime 311	Market-Dominant Governance	Economic-driven governance emphasizing market forces #311	Oceania	Australia
+312	Regime 312	Algorithmic Governance	Automated decision systems guiding policy and regulation #312	Global	United Nations
+313	Regime 313	Nation-State Governance	Traditional state model with centralized authority #313	Africa	South Africa
+314	Regime 314	Market-Dominant Governance	Economic-driven governance emphasizing market forces #314	Asia	South Korea
+315	Regime 315	Algorithmic Governance	Automated decision systems guiding policy and regulation #315	Europe	Spain
+316	Regime 316	Nation-State Governance	Traditional state model with centralized authority #316	Americas	United States
+317	Regime 317	Market-Dominant Governance	Economic-driven governance emphasizing market forces #317	Oceania	New Zealand
+318	Regime 318	Algorithmic Governance	Automated decision systems guiding policy and regulation #318	Global	Multinational Consortium
+319	Regime 319	Nation-State Governance	Traditional state model with centralized authority #319	Africa	Egypt
+320	Regime 320	Market-Dominant Governance	Economic-driven governance emphasizing market forces #320	Asia	Indonesia
+321	Regime 321	Algorithmic Governance	Automated decision systems guiding policy and regulation #321	Europe	United Kingdom
+322	Regime 322	Nation-State Governance	Traditional state model with centralized authority #322	Americas	Canada
+323	Regime 323	Market-Dominant Governance	Economic-driven governance emphasizing market forces #323	Oceania	Fiji
+324	Regime 324	Algorithmic Governance	Automated decision systems guiding policy and regulation #324	Global	Global Financial Forum
+325	Regime 325	Nation-State Governance	Traditional state model with centralized authority #325	Africa	Ghana
+326	Regime 326	Market-Dominant Governance	Economic-driven governance emphasizing market forces #326	Asia	China
+327	Regime 327	Algorithmic Governance	Automated decision systems guiding policy and regulation #327	Europe	Germany
+328	Regime 328	Nation-State Governance	Traditional state model with centralized authority #328	Americas	Brazil
+329	Regime 329	Market-Dominant Governance	Economic-driven governance emphasizing market forces #329	Oceania	Papua New Guinea
+330	Regime 330	Algorithmic Governance	Automated decision systems guiding policy and regulation #330	Global	International Coalition
+331	Regime 331	Nation-State Governance	Traditional state model with centralized authority #331	Africa	Nigeria
+332	Regime 332	Market-Dominant Governance	Economic-driven governance emphasizing market forces #332	Asia	India
+333	Regime 333	Algorithmic Governance	Automated decision systems guiding policy and regulation #333	Europe	France
+334	Regime 334	Nation-State Governance	Traditional state model with centralized authority #334	Americas	Mexico
+335	Regime 335	Market-Dominant Governance	Economic-driven governance emphasizing market forces #335	Oceania	Samoa
+336	Regime 336	Algorithmic Governance	Automated decision systems guiding policy and regulation #336	Global	European Union
+337	Regime 337	Nation-State Governance	Traditional state model with centralized authority #337	Africa	Kenya
+338	Regime 338	Market-Dominant Governance	Economic-driven governance emphasizing market forces #338	Asia	Japan
+339	Regime 339	Algorithmic Governance	Automated decision systems guiding policy and regulation #339	Europe	Italy
+340	Regime 340	Nation-State Governance	Traditional state model with centralized authority #340	Americas	Argentina
+341	Regime 341	Market-Dominant Governance	Economic-driven governance emphasizing market forces #341	Oceania	Australia
+342	Regime 342	Algorithmic Governance	Automated decision systems guiding policy and regulation #342	Global	United Nations
+343	Regime 343	Nation-State Governance	Traditional state model with centralized authority #343	Africa	South Africa
+344	Regime 344	Market-Dominant Governance	Economic-driven governance emphasizing market forces #344	Asia	South Korea
+345	Regime 345	Algorithmic Governance	Automated decision systems guiding policy and regulation #345	Europe	Spain
+346	Regime 346	Nation-State Governance	Traditional state model with centralized authority #346	Americas	United States
+347	Regime 347	Market-Dominant Governance	Economic-driven governance emphasizing market forces #347	Oceania	New Zealand
+348	Regime 348	Algorithmic Governance	Automated decision systems guiding policy and regulation #348	Global	Multinational Consortium
+349	Regime 349	Nation-State Governance	Traditional state model with centralized authority #349	Africa	Egypt
+350	Regime 350	Market-Dominant Governance	Economic-driven governance emphasizing market forces #350	Asia	Indonesia
+351	Regime 351	Algorithmic Governance	Automated decision systems guiding policy and regulation #351	Europe	United Kingdom
+352	Regime 352	Nation-State Governance	Traditional state model with centralized authority #352	Americas	Canada
+353	Regime 353	Market-Dominant Governance	Economic-driven governance emphasizing market forces #353	Oceania	Fiji
+354	Regime 354	Algorithmic Governance	Automated decision systems guiding policy and regulation #354	Global	Global Financial Forum
+355	Regime 355	Nation-State Governance	Traditional state model with centralized authority #355	Africa	Ghana
+356	Regime 356	Market-Dominant Governance	Economic-driven governance emphasizing market forces #356	Asia	China
+357	Regime 357	Algorithmic Governance	Automated decision systems guiding policy and regulation #357	Europe	Germany
+358	Regime 358	Nation-State Governance	Traditional state model with centralized authority #358	Americas	Brazil
+359	Regime 359	Market-Dominant Governance	Economic-driven governance emphasizing market forces #359	Oceania	Papua New Guinea
+360	Regime 360	Algorithmic Governance	Automated decision systems guiding policy and regulation #360	Global	International Coalition
+361	Regime 361	Nation-State Governance	Traditional state model with centralized authority #361	Africa	Nigeria
+362	Regime 362	Market-Dominant Governance	Economic-driven governance emphasizing market forces #362	Asia	India
+363	Regime 363	Algorithmic Governance	Automated decision systems guiding policy and regulation #363	Europe	France
+364	Regime 364	Nation-State Governance	Traditional state model with centralized authority #364	Americas	Mexico
+365	Regime 365	Market-Dominant Governance	Economic-driven governance emphasizing market forces #365	Oceania	Samoa
+366	Regime 366	Algorithmic Governance	Automated decision systems guiding policy and regulation #366	Global	European Union
+367	Regime 367	Nation-State Governance	Traditional state model with centralized authority #367	Africa	Kenya
+368	Regime 368	Market-Dominant Governance	Economic-driven governance emphasizing market forces #368	Asia	Japan
+369	Regime 369	Algorithmic Governance	Automated decision systems guiding policy and regulation #369	Europe	Italy
+370	Regime 370	Nation-State Governance	Traditional state model with centralized authority #370	Americas	Argentina
+371	Regime 371	Market-Dominant Governance	Economic-driven governance emphasizing market forces #371	Oceania	Australia
+372	Regime 372	Algorithmic Governance	Automated decision systems guiding policy and regulation #372	Global	United Nations
+373	Regime 373	Nation-State Governance	Traditional state model with centralized authority #373	Africa	South Africa
+374	Regime 374	Market-Dominant Governance	Economic-driven governance emphasizing market forces #374	Asia	South Korea
+375	Regime 375	Algorithmic Governance	Automated decision systems guiding policy and regulation #375	Europe	Spain
+376	Regime 376	Nation-State Governance	Traditional state model with centralized authority #376	Americas	United States
+377	Regime 377	Market-Dominant Governance	Economic-driven governance emphasizing market forces #377	Oceania	New Zealand
+378	Regime 378	Algorithmic Governance	Automated decision systems guiding policy and regulation #378	Global	Multinational Consortium
+379	Regime 379	Nation-State Governance	Traditional state model with centralized authority #379	Africa	Egypt
+380	Regime 380	Market-Dominant Governance	Economic-driven governance emphasizing market forces #380	Asia	Indonesia
+381	Regime 381	Algorithmic Governance	Automated decision systems guiding policy and regulation #381	Europe	United Kingdom
+382	Regime 382	Nation-State Governance	Traditional state model with centralized authority #382	Americas	Canada
+383	Regime 383	Market-Dominant Governance	Economic-driven governance emphasizing market forces #383	Oceania	Fiji
+384	Regime 384	Algorithmic Governance	Automated decision systems guiding policy and regulation #384	Global	Global Financial Forum
+385	Regime 385	Nation-State Governance	Traditional state model with centralized authority #385	Africa	Ghana
+386	Regime 386	Market-Dominant Governance	Economic-driven governance emphasizing market forces #386	Asia	China
+387	Regime 387	Algorithmic Governance	Automated decision systems guiding policy and regulation #387	Europe	Germany
+388	Regime 388	Nation-State Governance	Traditional state model with centralized authority #388	Americas	Brazil
+389	Regime 389	Market-Dominant Governance	Economic-driven governance emphasizing market forces #389	Oceania	Papua New Guinea
+390	Regime 390	Algorithmic Governance	Automated decision systems guiding policy and regulation #390	Global	International Coalition
+391	Regime 391	Nation-State Governance	Traditional state model with centralized authority #391	Africa	Nigeria
+392	Regime 392	Market-Dominant Governance	Economic-driven governance emphasizing market forces #392	Asia	India
+393	Regime 393	Algorithmic Governance	Automated decision systems guiding policy and regulation #393	Europe	France
+394	Regime 394	Nation-State Governance	Traditional state model with centralized authority #394	Americas	Mexico
+395	Regime 395	Market-Dominant Governance	Economic-driven governance emphasizing market forces #395	Oceania	Samoa
+396	Regime 396	Algorithmic Governance	Automated decision systems guiding policy and regulation #396	Global	European Union
+397	Regime 397	Nation-State Governance	Traditional state model with centralized authority #397	Africa	Kenya
+398	Regime 398	Market-Dominant Governance	Economic-driven governance emphasizing market forces #398	Asia	Japan
+399	Regime 399	Algorithmic Governance	Automated decision systems guiding policy and regulation #399	Europe	Italy
+400	Regime 400	Nation-State Governance	Traditional state model with centralized authority #400	Americas	Argentina
+401	Regime 401	Market-Dominant Governance	Economic-driven governance emphasizing market forces #401	Oceania	Australia
+402	Regime 402	Algorithmic Governance	Automated decision systems guiding policy and regulation #402	Global	United Nations
+403	Regime 403	Nation-State Governance	Traditional state model with centralized authority #403	Africa	South Africa
+404	Regime 404	Market-Dominant Governance	Economic-driven governance emphasizing market forces #404	Asia	South Korea
+405	Regime 405	Algorithmic Governance	Automated decision systems guiding policy and regulation #405	Europe	Spain
+406	Regime 406	Nation-State Governance	Traditional state model with centralized authority #406	Americas	United States
+407	Regime 407	Market-Dominant Governance	Economic-driven governance emphasizing market forces #407	Oceania	New Zealand
+408	Regime 408	Algorithmic Governance	Automated decision systems guiding policy and regulation #408	Global	Multinational Consortium
+409	Regime 409	Nation-State Governance	Traditional state model with centralized authority #409	Africa	Egypt
+410	Regime 410	Market-Dominant Governance	Economic-driven governance emphasizing market forces #410	Asia	Indonesia
+411	Regime 411	Algorithmic Governance	Automated decision systems guiding policy and regulation #411	Europe	United Kingdom
+412	Regime 412	Nation-State Governance	Traditional state model with centralized authority #412	Americas	Canada
+413	Regime 413	Market-Dominant Governance	Economic-driven governance emphasizing market forces #413	Oceania	Fiji
+414	Regime 414	Algorithmic Governance	Automated decision systems guiding policy and regulation #414	Global	Global Financial Forum
+415	Regime 415	Nation-State Governance	Traditional state model with centralized authority #415	Africa	Ghana
+416	Regime 416	Market-Dominant Governance	Economic-driven governance emphasizing market forces #416	Asia	China
+417	Regime 417	Algorithmic Governance	Automated decision systems guiding policy and regulation #417	Europe	Germany
+418	Regime 418	Nation-State Governance	Traditional state model with centralized authority #418	Americas	Brazil
+419	Regime 419	Market-Dominant Governance	Economic-driven governance emphasizing market forces #419	Oceania	Papua New Guinea
+420	Regime 420	Algorithmic Governance	Automated decision systems guiding policy and regulation #420	Global	International Coalition
+421	Regime 421	Nation-State Governance	Traditional state model with centralized authority #421	Africa	Nigeria
+422	Regime 422	Market-Dominant Governance	Economic-driven governance emphasizing market forces #422	Asia	India
+423	Regime 423	Algorithmic Governance	Automated decision systems guiding policy and regulation #423	Europe	France
+424	Regime 424	Nation-State Governance	Traditional state model with centralized authority #424	Americas	Mexico
+425	Regime 425	Market-Dominant Governance	Economic-driven governance emphasizing market forces #425	Oceania	Samoa
+426	Regime 426	Algorithmic Governance	Automated decision systems guiding policy and regulation #426	Global	European Union
+427	Regime 427	Nation-State Governance	Traditional state model with centralized authority #427	Africa	Kenya
+428	Regime 428	Market-Dominant Governance	Economic-driven governance emphasizing market forces #428	Asia	Japan
+429	Regime 429	Algorithmic Governance	Automated decision systems guiding policy and regulation #429	Europe	Italy
+430	Regime 430	Nation-State Governance	Traditional state model with centralized authority #430	Americas	Argentina
+431	Regime 431	Market-Dominant Governance	Economic-driven governance emphasizing market forces #431	Oceania	Australia
+432	Regime 432	Algorithmic Governance	Automated decision systems guiding policy and regulation #432	Global	United Nations
+433	Regime 433	Nation-State Governance	Traditional state model with centralized authority #433	Africa	South Africa
+434	Regime 434	Market-Dominant Governance	Economic-driven governance emphasizing market forces #434	Asia	South Korea
+435	Regime 435	Algorithmic Governance	Automated decision systems guiding policy and regulation #435	Europe	Spain
+436	Regime 436	Nation-State Governance	Traditional state model with centralized authority #436	Americas	United States
+437	Regime 437	Market-Dominant Governance	Economic-driven governance emphasizing market forces #437	Oceania	New Zealand
+438	Regime 438	Algorithmic Governance	Automated decision systems guiding policy and regulation #438	Global	Multinational Consortium
+439	Regime 439	Nation-State Governance	Traditional state model with centralized authority #439	Africa	Egypt
+440	Regime 440	Market-Dominant Governance	Economic-driven governance emphasizing market forces #440	Asia	Indonesia
+441	Regime 441	Algorithmic Governance	Automated decision systems guiding policy and regulation #441	Europe	United Kingdom
+442	Regime 442	Nation-State Governance	Traditional state model with centralized authority #442	Americas	Canada
+443	Regime 443	Market-Dominant Governance	Economic-driven governance emphasizing market forces #443	Oceania	Fiji
+444	Regime 444	Algorithmic Governance	Automated decision systems guiding policy and regulation #444	Global	Global Financial Forum
+445	Regime 445	Nation-State Governance	Traditional state model with centralized authority #445	Africa	Ghana
+446	Regime 446	Market-Dominant Governance	Economic-driven governance emphasizing market forces #446	Asia	China
+447	Regime 447	Algorithmic Governance	Automated decision systems guiding policy and regulation #447	Europe	Germany
+448	Regime 448	Nation-State Governance	Traditional state model with centralized authority #448	Americas	Brazil
+449	Regime 449	Market-Dominant Governance	Economic-driven governance emphasizing market forces #449	Oceania	Papua New Guinea
+450	Regime 450	Algorithmic Governance	Automated decision systems guiding policy and regulation #450	Global	International Coalition
+451	Regime 451	Nation-State Governance	Traditional state model with centralized authority #451	Africa	Nigeria
+452	Regime 452	Market-Dominant Governance	Economic-driven governance emphasizing market forces #452	Asia	India
+453	Regime 453	Algorithmic Governance	Automated decision systems guiding policy and regulation #453	Europe	France
+454	Regime 454	Nation-State Governance	Traditional state model with centralized authority #454	Americas	Mexico
+455	Regime 455	Market-Dominant Governance	Economic-driven governance emphasizing market forces #455	Oceania	Samoa
+456	Regime 456	Algorithmic Governance	Automated decision systems guiding policy and regulation #456	Global	European Union
+457	Regime 457	Nation-State Governance	Traditional state model with centralized authority #457	Africa	Kenya
+458	Regime 458	Market-Dominant Governance	Economic-driven governance emphasizing market forces #458	Asia	Japan
+459	Regime 459	Algorithmic Governance	Automated decision systems guiding policy and regulation #459	Europe	Italy
+460	Regime 460	Nation-State Governance	Traditional state model with centralized authority #460	Americas	Argentina
+461	Regime 461	Market-Dominant Governance	Economic-driven governance emphasizing market forces #461	Oceania	Australia
+462	Regime 462	Algorithmic Governance	Automated decision systems guiding policy and regulation #462	Global	United Nations
+463	Regime 463	Nation-State Governance	Traditional state model with centralized authority #463	Africa	South Africa
+464	Regime 464	Market-Dominant Governance	Economic-driven governance emphasizing market forces #464	Asia	South Korea
+465	Regime 465	Algorithmic Governance	Automated decision systems guiding policy and regulation #465	Europe	Spain
+466	Regime 466	Nation-State Governance	Traditional state model with centralized authority #466	Americas	United States
+467	Regime 467	Market-Dominant Governance	Economic-driven governance emphasizing market forces #467	Oceania	New Zealand
+468	Regime 468	Algorithmic Governance	Automated decision systems guiding policy and regulation #468	Global	Multinational Consortium
+469	Regime 469	Nation-State Governance	Traditional state model with centralized authority #469	Africa	Egypt
+470	Regime 470	Market-Dominant Governance	Economic-driven governance emphasizing market forces #470	Asia	Indonesia
+471	Regime 471	Algorithmic Governance	Automated decision systems guiding policy and regulation #471	Europe	United Kingdom
+472	Regime 472	Nation-State Governance	Traditional state model with centralized authority #472	Americas	Canada
+473	Regime 473	Market-Dominant Governance	Economic-driven governance emphasizing market forces #473	Oceania	Fiji
+474	Regime 474	Algorithmic Governance	Automated decision systems guiding policy and regulation #474	Global	Global Financial Forum
+475	Regime 475	Nation-State Governance	Traditional state model with centralized authority #475	Africa	Ghana
+476	Regime 476	Market-Dominant Governance	Economic-driven governance emphasizing market forces #476	Asia	China
+477	Regime 477	Algorithmic Governance	Automated decision systems guiding policy and regulation #477	Europe	Germany
+478	Regime 478	Nation-State Governance	Traditional state model with centralized authority #478	Americas	Brazil
+479	Regime 479	Market-Dominant Governance	Economic-driven governance emphasizing market forces #479	Oceania	Papua New Guinea
+480	Regime 480	Algorithmic Governance	Automated decision systems guiding policy and regulation #480	Global	International Coalition
+481	Regime 481	Nation-State Governance	Traditional state model with centralized authority #481	Africa	Nigeria
+482	Regime 482	Market-Dominant Governance	Economic-driven governance emphasizing market forces #482	Asia	India
+483	Regime 483	Algorithmic Governance	Automated decision systems guiding policy and regulation #483	Europe	France
+484	Regime 484	Nation-State Governance	Traditional state model with centralized authority #484	Americas	Mexico
+485	Regime 485	Market-Dominant Governance	Economic-driven governance emphasizing market forces #485	Oceania	Samoa
+486	Regime 486	Algorithmic Governance	Automated decision systems guiding policy and regulation #486	Global	European Union
+487	Regime 487	Nation-State Governance	Traditional state model with centralized authority #487	Africa	Kenya
+488	Regime 488	Market-Dominant Governance	Economic-driven governance emphasizing market forces #488	Asia	Japan
+489	Regime 489	Algorithmic Governance	Automated decision systems guiding policy and regulation #489	Europe	Italy
+490	Regime 490	Nation-State Governance	Traditional state model with centralized authority #490	Americas	Argentina
+491	Regime 491	Market-Dominant Governance	Economic-driven governance emphasizing market forces #491	Oceania	Australia
+492	Regime 492	Algorithmic Governance	Automated decision systems guiding policy and regulation #492	Global	United Nations
+493	Regime 493	Nation-State Governance	Traditional state model with centralized authority #493	Africa	South Africa
+494	Regime 494	Market-Dominant Governance	Economic-driven governance emphasizing market forces #494	Asia	South Korea
+495	Regime 495	Algorithmic Governance	Automated decision systems guiding policy and regulation #495	Europe	Spain
+496	Regime 496	Nation-State Governance	Traditional state model with centralized authority #496	Americas	United States
+497	Regime 497	Market-Dominant Governance	Economic-driven governance emphasizing market forces #497	Oceania	New Zealand
+498	Regime 498	Algorithmic Governance	Automated decision systems guiding policy and regulation #498	Global	Multinational Consortium
+499	Regime 499	Nation-State Governance	Traditional state model with centralized authority #499	Africa	Egypt
+500	Regime 500	Market-Dominant Governance	Economic-driven governance emphasizing market forces #500	Asia	Indonesia

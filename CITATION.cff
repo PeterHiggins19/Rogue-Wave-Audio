@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use or reference this work, please cite it as below."
+title: "Rogue Wave Audio — Organic Digital Loudspeakers"
+abstract: >-
+  A design framework for loudspeakers that bridge digital precision with
+  organic acoustic behavior. Covers driver selection, crossover topology,
+  cabinet design, diffraction correction (DADC-DADI), and BTL studio lab
+  certification.
+type: software
+authors:
+  - family-names: Higgins
+    given-names: Peter
+    email: peterhiggins2016@gmail.com
+date-released: "2026-03-11"
+version: "2.6"
+repository-code: "https://github.com/peterhiggins/RWA"
+license: "All Rights Reserved"
+keywords:
+  - loudspeaker design
+  - organic digital
+  - BTL studio
+  - diffraction correction
+  - DADC-DADI
+  - audio engineering
+  - crossover design

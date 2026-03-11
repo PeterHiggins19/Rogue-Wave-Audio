@@ -1,0 +1,9 @@
+{
+  "name": "btl-build-guide",
+  "version": "1.0.0",
+  "description": "BTL Build Guide Generator",
+  "main": "build_btl_guide.js",
+  "dependencies": {
+    "docx": "^8.12.0"
+  }
+}

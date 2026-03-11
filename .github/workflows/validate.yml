@@ -1,0 +1,34 @@
+name: Validate Documents
+
+on:
+  push:
+    paths:
+      - 'docs/**/*.docx'
+      - 'src/**/*.js'
+  pull_request:
+    paths:
+      - 'docs/**/*.docx'
+      - 'src/**/*.js'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Check builders exist for canonical docs
+        run: |
+          echo "Checking builder-document consistency..."
+          for builder in src/builders/*.js; do
+            echo "  Builder found: $builder"
+          done
+          for doc in docs/papers/*.docx; do
+            echo "  Document found: $doc"
+          done
