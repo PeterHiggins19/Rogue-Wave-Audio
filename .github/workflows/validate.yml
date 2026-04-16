@@ -1,34 +1,109 @@
-name: Validate Documents
+# Rogue Wave Audio — Repository Validation
+# Runs on every push to master. Checks that key files exist,
+# links between RWA and HUF are intact, and CITATION.cff is valid YAML.
+
+name: Validate Repository
 
 on:
   push:
-    paths:
-      - 'docs/**/*.docx'
-      - 'src/**/*.js'
+    branches: [master]
   pull_request:
-    paths:
-      - 'docs/**/*.docx'
-      - 'src/**/*.js'
+    branches: [master]
 
 jobs:
   validate:
     runs-on: ubuntu-latest
+    name: Validate structure and references
+
     steps:
-      - uses: actions/checkout@v4
-        with:
-          lfs: true
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: Check builders exist for canonical docs
+      - name: Check core files exist
         run: |
-          echo "Checking builder-document consistency..."
-          for builder in src/builders/*.js; do
-            echo "  Builder found: $builder"
+          echo "=== Checking core files ==="
+          files=(
+            "README.md"
+            "CITATION.cff"
+            "LINEAGE.md"
+            "HUF_RELATIONSHIP.json"
+          )
+          missing=0
+          for f in "${files[@]}"; do
+            if [ -f "$f" ]; then
+              echo "✓ $f"
+            else
+              echo "✗ $f — MISSING"
+              missing=$((missing + 1))
+            fi
           done
-          for doc in docs/papers/*.docx; do
-            echo "  Document found: $doc"
-          done
+          if [ $missing -gt 0 ]; then
+            echo "::error::$missing core file(s) missing"
+            exit 1
+          fi
+          echo "All core files present."
+
+      - name: Validate CITATION.cff is valid YAML
+        run: |
+          echo "=== Validating CITATION.cff ==="
+          python3 -c "
+          import yaml, sys
+          try:
+              with open('CITATION.cff') as f:
+                  data = yaml.safe_load(f)
+              assert 'title' in data, 'Missing title field'
+              assert 'authors' in data, 'Missing authors field'
+              print('✓ CITATION.cff is valid YAML with required fields')
+          except Exception as e:
+              print(f'✗ CITATION.cff validation failed: {e}')
+              sys.exit(1)
+          "
+
+      - name: Validate HUF_RELATIONSHIP.json
+        run: |
+          echo "=== Validating HUF_RELATIONSHIP.json ==="
+          python3 -c "
+          import json, sys
+          try:
+              with open('HUF_RELATIONSHIP.json') as f:
+                  data = json.load(f)
+              assert 'relationship' in data, 'Missing relationship key'
+              print('✓ HUF_RELATIONSHIP.json is valid JSON')
+              print(f'  Relationship type: {data[\"relationship\"].get(\"type\", \"unknown\")}')
+          except Exception as e:
+              print(f'✗ HUF_RELATIONSHIP.json validation failed: {e}')
+              sys.exit(1)
+          "
+
+      - name: Check concept directories
+        run: |
+          echo "=== Checking concept directories ==="
+          if [ -d "concepts" ]; then
+            count=$(find concepts -name "README.md" | wc -l)
+            echo "✓ concepts/ directory exists with $count README files"
+            find concepts -name "README.md" -exec echo "  - {}" \;
+          else
+            echo "⚠ No concepts/ directory (optional)"
+          fi
+
+      - name: Check docs directory
+        run: |
+          echo "=== Checking docs directory ==="
+          if [ -d "docs" ]; then
+            count=$(find docs -type f | wc -l)
+            echo "✓ docs/ directory exists with $count files"
+            find docs -type f -exec echo "  - {}" \;
+          else
+            echo "⚠ No docs/ directory (optional)"
+          fi
+
+      - name: Summary
+        run: |
+          echo ""
+          echo "════════════════════════════════════════"
+          echo "  Rogue Wave Audio — Validation passed"
+          echo "════════════════════════════════════════"
+          echo ""
+          echo "  Sibling: Higgins Unity Framework"
+          echo "  https://github.com/PeterHiggins19/Higgins-Unity-Framework"
+          echo ""

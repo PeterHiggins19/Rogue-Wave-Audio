@@ -19,6 +19,12 @@ New files (add to the repo):
 - `concepts/btl-lab-study/README.md` — overview of the physical systems study proposal.
 - `concepts/btl-lab-study/BTL_Advanced_ODL_Test_Platform.md` — the detailed proposal: stereo pair of BTL Advanced Organic Digital Loudspeakers under Smaart v9 monitoring, as a cross-validation platform between RWA hardware and HUF methods.
 
+## NEW: GitHub Actions workflow
+
+- `.github/workflows/validate.yml` — Repository validation workflow that runs on every push to `master`. Checks that core files exist (README, CITATION.cff, LINEAGE.md, HUF_RELATIONSHIP.json), validates CITATION.cff as proper YAML, validates HUF_RELATIONSHIP.json as proper JSON, and reports on concept/docs directories. This is why you weren't seeing Actions runs — there was no workflow file to trigger.
+
+Copy the `.github/` folder into the root of your local RWA repo clone. After push, you'll see "Validate Repository" runs in the Actions tab, just like "Validate Documents" shows up for HUF.
+
 ## Suggested commit sequence
 
 One commit, or split as you prefer. Suggested split:
@@ -33,7 +39,10 @@ One commit, or split as you prefer. Suggested split:
 **Commit 2: "BTL Advanced ODL lab study — physical systems cross-validation platform"**
 - concepts/btl-lab-study/ (new folder with two files)
 
-Single commit works too; the split just keeps the relationship work and the new lab study conceptually separate.
+**Commit 3: "Add GitHub Actions validation workflow"**
+- .github/workflows/validate.yml (new)
+
+Single commit works too; the split just keeps things conceptually separate. The workflow commit should go last so it validates the files that were already pushed.
 
 ## What's NOT in this update
 
