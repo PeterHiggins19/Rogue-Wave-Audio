@@ -67,9 +67,12 @@ jobs:
           try:
               with open('HUF_RELATIONSHIP.json') as f:
                   data = json.load(f)
-              assert 'relationship' in data, 'Missing relationship key'
-              print('✓ HUF_RELATIONSHIP.json is valid JSON')
-              print(f'  Relationship type: {data[\"relationship\"].get(\"type\", \"unknown\")}')
+              assert '_meta' in data, 'Missing _meta key'
+              assert 'repos' in data, 'Missing repos key'
+              assert 'cross_reference_map' in data, 'Missing cross_reference_map key'
+              print('✓ HUF_RELATIONSHIP.json is valid JSON with required structure')
+              print(f'  Type: {data[\"_meta\"].get(\"type\", \"unknown\")}')
+              print(f'  Cross-references: {len([k for k in data[\"cross_reference_map\"] if not k.startswith(\"_\")])}')
           except Exception as e:
               print(f'✗ HUF_RELATIONSHIP.json validation failed: {e}')
               sys.exit(1)
