@@ -1,0 +1,150 @@
+{
+  "_meta": {
+    "type": "RWA-HUF-RELATIONSHIP",
+    "version": "1.0",
+    "created": "2026-04-15",
+    "author": "Peter Higgins / Claude",
+    "purpose": "Machine-readable cross-reference from Rogue Wave Audio (RWA) concepts and artifacts to their counterparts in the Higgins Unity Framework (HUF) repository. Reciprocal to the HUF-side ai-refresh/MASTER_LINEAGE.json.",
+    "reciprocal_document": "HUF repo: ai-refresh/MASTER_LINEAGE.json — the complete arc of discovery with timeline, invariants carried forward, and cross-reference map in the other direction",
+    "founding_principle": "The past is our strength and our future. The mathematics HUF formalizes was discovered empirically in this lab first, for loudspeakers. Every HUF concept has an ancestor here."
+  },
+
+  "repos": {
+    "rwa": {
+      "url": "https://github.com/PeterHiggins19/Rogue-Wave-Audio",
+      "role": "Engineering home. Where the instrument was built. Loudspeaker diffraction correction, BTL studio lab, DADC-DADI-ADAC chain, Higgins Operator H₁, concept R&D."
+    },
+    "huf": {
+      "url": "https://github.com/PeterHiggins19/Higgins-Unity-Framework",
+      "role": "Scientific framework home. Where the physics became compositional data analysis. MC-4 composition monitoring, EITT, CoDa formalization, cross-domain validation, governance doctrine."
+    }
+  },
+
+  "cross_reference_map": {
+    "_purpose": "Each RWA concept/artifact points to its HUF counterpart (or notes the absence). Reading this file tells you what RWA work the HUF repo is building on.",
+
+    "DADC_DADC_Dimensional_Apportioned_Diffraction_Correction": {
+      "rwa_location": "docs/papers/Dimension-Apportioned_Diffraction_Correction_and_Inference_DADC-DADI.docx",
+      "rwa_origin_date": "2024-12-05",
+      "huf_counterpart": "MC-4 (Composition Monitoring — the fourth monitoring category) and the shape/magnitude decomposition in science/eitt/EITT_WHY_IT_WORKS.md §7",
+      "relationship": "The gain vector (G_H, G_W, G_D) / 6.02 dB is a 3-simplex composition. The shape/magnitude split between gains (apportionment) and corner frequencies (scale) is exactly what HUF's shape/magnitude decomposition generalizes. DADC was doing CoDa before CoDa was named."
+    },
+
+    "DADI_Dimensional_Apportioned_Diffraction_Inference": {
+      "rwa_location": "docs/papers/Dimension-Apportioned_Diffraction_Correction_and_Inference_DADC-DADI.docx (second section)",
+      "rwa_origin_date": "2024-12-06",
+      "huf_counterpart": "EITT inversion diagnostic (when entropy invariance fails at dimension K, increase K for hidden dimensions or decrease K for non-stationarity)",
+      "relationship": "DADI inverts the acoustic response to recover physical dimensions. When the inversion fails it diagnoses either a hidden dimension or a non-stationary condition. EITT inversion does the same thing for temporal data: when decimation-invariance fails, the direction of the failure tells you what's wrong."
+    },
+
+    "ADAC_Adaptive_Dimensional_Apportioning_Correction": {
+      "rwa_location": "Implied in the DADC-DADI-ADAC chain documented in docs/papers/",
+      "rwa_origin_date": "2025, early-mid",
+      "huf_counterpart": "HUF-GOV / HUF-CLS fork documented in briefings/THE_LINEAGE.md and throughout the HUF governance architecture",
+      "relationship": "ADAC is where the engineering instinct to close the feedback loop met the discipline to not close it automatically. HUF-GOV (open-loop, stateless, scientific) and HUF-CLS (closed-loop, stateful, control) are the two paths from that fork. Same error signal, two architectures, a human decision between them."
+    },
+
+    "BTL_Binaural_Test_Lab": {
+      "rwa_location": "docs/btl-lab/ and data/btl-lab/",
+      "rwa_origin_date": "2025-01 through 2025-02 (certification)",
+      "huf_counterpart": "science/loudspeaker-analogy/ in the HUF repo, plus the concepts/btl-lab-study/ in RWA (new, proposes the Advanced ODL stereo pair as a cross-validation platform)",
+      "relationship": "BTL is the physical lab where measurement instincts and compositional mathematics met. Every HUF methodological claim can be referenced back to what BTL measurements demonstrated."
+    },
+
+    "Higgins_Operator_H1": {
+      "rwa_location": "docs/papers/The_Higgins_Operator_H1_101.pdf",
+      "rwa_origin_date": "2026-02",
+      "huf_counterpart": "No single HUF document corresponds to H₁; it is the abstract-Hilbert-space generalization that bridges DADC (acoustic) and HUF (compositional time series). Applications listed in the H₁ paper — CCC cosmology, Toronto urban resilience, EUV lithography, Planck CMB, stellar fusion — are all compositional monitoring problems in different clothes.",
+      "relationship": "H₁'s unity-normalization + directional-coherence preservation is the operator-theoretic statement of 'parts sum to constant, directional information is preserved, measurement is inert.' HUF's entropy preservation under geometric-mean decimation (EITT) is a specific instance."
+    },
+
+    "Isotropic_Principle": {
+      "rwa_location": "Implicit in BTL design and DADC formulation; named explicitly in HUF's briefings/THE_LINEAGE.md",
+      "rwa_origin": "The acoustic ground state: at low frequencies, omnidirectional radiation distributes energy equally across 4π steradian",
+      "huf_counterpart": "The barycenter of the simplex (1/D, 1/D, ..., 1/D); maximum-entropy composition; the reference state every departure is measured against",
+      "relationship": "Same idea, different coordinates. RWA found it in radiation patterns; HUF generalized it to any compositional system's ground state."
+    },
+
+    "Paired_Measurement_Doctrine": {
+      "rwa_location": "Embedded in BTL measurement practice; named in HUF's briefings/THE_LINEAGE.md",
+      "rwa_origin": "Acoustic instinct: a flat frequency response can hide violent directional redistribution; one curve lies",
+      "huf_counterpart": "HUF's three-diagnostic protocol (Total Variation + Aitchison distance + coherence residual) in science/coda-monitoring/",
+      "relationship": "Same doctrine scaled from two metrics to three. Metric agreement = robustness. Metric disagreement = diagnostic information about the type of change."
+    },
+
+    "entropix_concept_branch": {
+      "rwa_location": "concepts/entropix/",
+      "rwa_origin_date": "2025 (exact date per folder history)",
+      "huf_counterpart": "EITT (Entropy-Invariant Time Transformer) in science/eitt/",
+      "relationship": "Likely conceptual ancestor of EITT. The 'entropix' name predates the EITT acronym by months. Regime-balanced predictive systems was a named R&D thread before entropy-invariance-under-decimation was formalized."
+    },
+
+    "regimes_concept_branch": {
+      "rwa_location": "concepts/regimes/",
+      "huf_counterpart": "HUF regime vocabulary throughout (HUF-GOV regimes, drift-flagged regimes, regime-shift detection in science/governance/)",
+      "relationship": "Direct ancestor. HUF's regime concept is this RWA concept carried forward verbatim."
+    },
+
+    "v_infinity_core_concept_branch": {
+      "rwa_location": "concepts/v-infinity-core/",
+      "huf_counterpart": "science/quantum/HUF_VCore_Stack_Brief_v1.0 — the V∞Core stack documentation referenced as part of the HUF operating manual",
+      "relationship": "Direct name carry-through. V∞Core engine architecture from RWA becomes V∞Core stack in HUF."
+    },
+
+    "tensor_acoustic_forge_concept_branch": {
+      "rwa_location": "concepts/tensor-acoustic-forge/",
+      "huf_counterpart": "Possibly the pipeline mindset behind chem_eitt_pipeline.py; no direct named equivalent in HUF",
+      "relationship": "Conceptual adjacency rather than direct ancestor. Processing-pipeline approach to acoustic signals anticipates the processing-pipeline approach to compositional time series."
+    },
+
+    "ai_reports_concept_branch": {
+      "rwa_location": "concepts/ai-reports/ (9 Grok reports numbered 24, 25, 46-52)",
+      "huf_counterpart": "briefings/ folder in the HUF repo (accumulated per-AI briefings, cold-start tests, lit-verification briefings)",
+      "relationship": "Same methodological instinct: preserve all AI exchanges systematically. The collective-AI working style that HUF formalized around five AIs (Claude, ChatGPT, Grok, Gemini, Copilot) started as Grok reports in RWA."
+    },
+
+    "BTL_Advanced_ODL_Lab_Study": {
+      "rwa_location": "concepts/btl-lab-study/ (new, 2026-04-15)",
+      "huf_counterpart": "Cross-validation platform for HUF methods against physical acoustic truth; connects to science/loudspeaker-analogy/ via shared measurement infrastructure",
+      "relationship": "The physical-hardware realization of the RWA↔HUF alliance. A stereo pair of BTL Advanced Organic Digital Loudspeakers under Smaart v9 monitoring becomes a laboratory test bed where compositional-monitoring hypotheses can be validated against real acoustic data."
+    }
+  },
+
+  "invariants_shared_across_repos": {
+    "_note": "These are physical or methodological constants that appear identically in both repos, with the RWA origin documented and the HUF extension referencing it.",
+
+    "6.02_dB": {
+      "value": "20 * log10(2) ≈ 6.0206",
+      "rwa_role": "Total baffle-step correction budget; the fixed sum across cabinet dimensions",
+      "huf_role": "Binary doubling; the 2:1 compression ratio as fundamental EITT test; primary decimation diagnostic"
+    },
+
+    "115_Hz_meter": {
+      "value": "115 Hz·m (empirical acoustic constant)",
+      "rwa_role": "Wavenumber-dimension product: corner frequency = 115/dimension",
+      "huf_role": "Scale constant linking compositional dimension to temporal autocorrelation length; block width M relates to characteristic timescale"
+    },
+
+    "Inert_Measurement_Principle": {
+      "rwa_role": "Non-contact diagnostic design: probe reads the object without imprinting its signature",
+      "huf_role": "'HUF is inert.' Open-loop governance by architectural mechanism, not philosophical choice"
+    },
+
+    "Sum_Equals_Constant_Closure": {
+      "rwa_role": "Gains sum to exactly 6.02 dB across cabinet dimensions",
+      "huf_role": "Simplex closure constraint: compositional parts sum to κ = 1 (or any fixed constant)"
+    }
+  },
+
+  "maintenance": {
+    "update_rule": "When the RWA repo adds new concepts, artifacts, or papers, add an entry to cross_reference_map. When the HUF repo formalizes a new capability with an RWA ancestor, note the ancestor here.",
+    "reciprocal_file": "The HUF-side ai-refresh/MASTER_LINEAGE.json should be kept in sync. When this file changes, update the corresponding entry there.",
+    "cold_start_protocol": "Any AI starting work on either repo should read this file plus the reciprocal MASTER_LINEAGE.json to understand the full arc."
+  },
+
+  "status": {
+    "version": "1.0",
+    "established": "2026-04-15",
+    "last_updated": "2026-04-15"
+  }
+}
