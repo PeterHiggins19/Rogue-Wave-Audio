@@ -1,0 +1,64 @@
+{
+  "_meta": {
+    "type": "RWA-FAST-REFRESH",
+    "version": "v1.0",
+    "created": "2026-06-07",
+    "updated": "2026-06-11",
+    "author": "Peter Higgins / Claude (Cowork session)",
+    "purpose": "Single-file AI context loader for the Rogue Wave Audio (RWA) repository. Load FIRST in any new RWA session. Created 2026-06-07 by the Cowork corpus-authority reconciliation to give RWA the same fast-refresh layer HUF and Hs already have. Source of truth for RWA canonical names; on any conflict with a document, this file wins. The RWA-001.json lab identity card and HUF_RELATIONSHIP.json remain the deeper canonical references.",
+    "refresh_protocol": "When new canonical results land, update this file FIRST, then rebuild documents from it.",
+    "companions": {
+      "lab_identity": "RWA-001.json — canonical BTL lab identity card",
+      "lineage": "LINEAGE.md + HUF_RELATIONSHIP.json — arc from RWA engineering to HUF/Hs formalization",
+      "ground_state": "THE_GROUND_STATE.md — the headwater: the one formula (6.02 dB apportioned, f_c=115/dim), ground state = simplex barycentre, time forced by the boundary not tacked on (added 2026-06-11)",
+      "arc_of_discovery": "ARC_OF_DISCOVERY.md + arc_of_discovery.svg — the 9-step executive summary, source to network (identical across RWA/HUF/Hs; added 2026-06-11)",
+      "graduate_school": "GRADUATE_SCHOOL.md — the deep onboarding curriculum (the graduate-level ai-refresh), weaving HISTORY_THREAD.md (the development+necessity thread). With DOCUMENT_DISTRIBUTION.md + TRIPLE_JOURNAL.md these form the shared 'map of the whole', identical across RWA/HUF/Hs (added 2026-06-12)",
+      "corpus_map": "the mirror-root CORPUS_MAP_2026-06-07.md + CORPUS_MANIFEST_2026-06-07.json"
+    }
+  },
+  "identity": {
+    "project": "Rogue Wave Audio (RWA)",
+    "founder": "Peter Higgins",
+    "contact_authority": "RWA-001.json (this repo) -- the canonical contact/identity authority for the whole system (RWA/HUF/Hs); check there. RWA-001 wins on any conflict.",
+    "domain": "Professional audio engineering: organic digital loudspeaker design, Binaural Test Lab (BTL) certification, advanced acoustic methods",
+    "github": "https://github.com/PeterHiggins19/Rogue-Wave-Audio",
+    "role_in_corpus": "Engineering home — where the instrument was built. The compositional mathematics later formalized in HUF (MC-4, EITT) and Hs (CNT/CNQ) was discovered empirically here, for loudspeakers."
+  },
+  "canonical_names": {
+    "BTL": "Binaural Test Lab — single canonical identity (NOT 'Below Threshold Loudspeaker'; the dual gloss was an error). A sound-controlled professional laboratory; research deployment in Markham, Ontario plus a four-laboratory institutional network (two in Ottawa, two in Monaco) per a private Canadian industrial sponsor. See RWA-001.json.",
+    "DADC-DADI": "Dimension-Apportioned Diffraction Correction and Inference — cabinet edge-diffraction prediction/equalization; the gain vector sums to exactly 6.02 dB across cabinet dimensions = a 3-simplex composition (the engineering origin of HUF's MC-4).",
+    "ADAC": "part of the DADC/DADI/ADAC compositional-analysis chain",
+    "H1": "Higgins Operator H1 — a nonlinear unity-normalization map (sum = 1) across hierarchical regimes preserving directional coherence; self-hosted working paper, February 2026 (NOT a formally peer-reviewed publication — do not miscite as 'published').",
+    "ODL": "Organic Digital Loudspeakers (flagship paper, v2.6) — loudspeakers with digital-grade accuracy and natural acoustic behavior."
+  },
+  "core_projects": [
+    "Organic Digital Loudspeakers (v2.6) — flagship design framework",
+    "BTL Small Studio Lab — certified monitoring environment",
+    "DADC-DADI — diffraction correction (6.02 dB 3-simplex)",
+    "Higgins Operator H1 — unity-normalization map (self-hosted working paper, Feb 2026)",
+    "BTL Advanced ODL Lab Study (proposal)"
+  ],
+  "lineage_one_liner": "DADC was doing CoDa before CoDa was named: the 6.02 dB gain simplex in loudspeaker diffraction correction became HUF's MC-4 and, downstream, the Hs/CNT/CNQ instrument. The past is the strength and the future.",
+  "current_state_2026_06_07": {
+    "github_last_push": "2026-04-16 (branch master)",
+    "mirror_uncommitted": "63 files in Current-Repo/RWA (mostly archive/, docs/, concepts/) — not yet committed/pushed",
+    "admin_layer": "this RWA_FAST_REFRESH.json + RWA_ADMIN.json created 2026-06-07 (RWA previously had no fast-refresh/admin layer)",
+    "action_owed": "Peter (via GitHub Desktop): review + commit the 63 uncommitted files and push; remote is behind since 2026-04-16.",
+    "siblings": "higgins-decomposition (Hs, active instrument/conference repo) and Higgins-Unity-Framework (HUF, scientific framework). RWA is the engineering origin."
+  },
+  "current_state_2026_06_11": {
+    "new_canonical_surfaces": [
+      "THE_GROUND_STATE.md — origin document (the one formula + the time argument)",
+      "ARC_OF_DISCOVERY.md + arc_of_discovery.svg — shared 9-step arc (identical across the three repos)",
+      "README.md — now opens with the three-level orientation (Level 1 shared message, Level 2 the siblings, Level 3 RWA is the headwater) and closes with a maintained References & Acknowledgments block",
+      "LINEAGE.md + HUF_RELATIONSHIP.json — updated with the headwater entry"
+    ],
+    "action_owed": "Peter (via GitHub Desktop): review + commit + push RWA (remote behind since 2026-04-16). See mirror-root PUSH_READY_2026-06-11_arc_eitt.md.",
+    "verification": "Links resolve (CITATION.cff, ARC, SVG, THE_GROUND_STATE all present); HUF_RELATIONSHIP.json valid; arc SVG identical across the three repos."
+  },
+  "common_drift_errors": {
+    "btl_dual_gloss": "BTL = Binaural Test Lab only. 'Below Threshold Loudspeaker' is an error.",
+    "btl_basement_framing": "BTL is a sound-controlled professional laboratory, not a 'basement lab'.",
+    "h1_published_miscite": "H1 is a self-hosted working paper (Feb 2026), not a formal peer-reviewed publication."
+  }
+}

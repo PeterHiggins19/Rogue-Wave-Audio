@@ -8,7 +8,7 @@
 
 ### Hardware
 
-A stereo pair of BTL Advanced Organic Digital Loudspeakers, conforming to the BTL (Below Threshold Loudspeaker) certification standards documented in the RWA repository's `docs/btl-lab/` folder. The "Advanced" designation refers to the current flagship design produced by the Organic Digital Loudspeakers v2.6 framework (see `docs/papers/Organic_Digital_Loudspeakers_v2.6.docx`).
+A stereo pair of BTL Advanced Organic Digital Loudspeakers, conforming to the **Binaural Test Lab (BTL)** certification standards documented in the RWA repository's `docs/btl-lab/` folder. BTL is a single canonical identity (lab identity card: [`../../RWA-001.json`](../../RWA-001.json)). The "Advanced" designation refers to the current flagship design produced by the Organic Digital Loudspeakers v2.6 framework (see `docs/papers/Organic_Digital_Loudspeakers_v2.6.docx`).
 
 Pair configuration:
 

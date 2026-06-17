@@ -1,0 +1,53 @@
+{
+  "_meta": {
+    "type": "RWA_ADMINISTRATIVE_REGISTER",
+    "version": "1.0",
+    "created": "2026-06-07",
+    "updated": "2026-06-09",
+    "previous_updated": "2026-06-07",
+    "review_2026_06_09": "2026-06-09 Cowork management refresh — RWA repo UNCHANGED this session (no RWA work); reviewed and current as of the 2026-06-07 admin layer. Remote behind / uncommitted as before.",
+    "author": "Peter Higgins / Claude (Cowork session)",
+    "purpose": "Administrative register for Rogue Wave Audio (RWA), mirroring the HUF/Hs admin pattern. Created 2026-06-07 by the Cowork corpus-authority reconciliation (RWA previously had no admin layer). Extends the RWA-001 identity card; RWA-001.json wins on lab-identity specifics.",
+    "update_authority": "Peter Higgins only"
+  },
+  "principal": {
+    "name": "Peter Higgins",
+    "role": "Founder; audio/electronics engineer"
+  },
+  "lab": {
+    "canonical_name": "Binaural Test Lab (BTL)",
+    "class": "Sound-controlled professional laboratory",
+    "research_deployment": "Markham, Ontario, Canada",
+    "institutional_network": "Four-laboratory deployment (two in Ottawa, two in Monaco) per a private Canadian industrial sponsor, as stated in RWA-001.json",
+    "identity_card": "RWA-001.json",
+    "canonical_lock": "BTL = Binaural Test Lab only (not 'Below Threshold Loudspeaker'); a professional laboratory, not a 'basement lab'."
+  },
+  "repo": {
+    "github": "https://github.com/PeterHiggins19/Rogue-Wave-Audio",
+    "default_branch": "master",
+    "github_last_push": "2026-04-16",
+    "github_size_approx": "~3 MB",
+    "license": "see LICENSE in repo (GitHub reports 'Other')"
+  },
+  "canonical_outputs": [
+    "Organic Digital Loudspeakers (v2.6)",
+    "DADC-DADI (Dimension-Apportioned Diffraction Correction and Inference; 6.02 dB 3-simplex)",
+    "ADAC (part of the DADC/DADI/ADAC chain)",
+    "Higgins Operator H1 (self-hosted working paper, Feb 2026 — not formally published)",
+    "BTL Small Studio Lab certification"
+  ],
+  "relationship_to_corpus": {
+    "huf": "Higgins-Unity-Framework — scientific framework home (MC-4, EITT). Reciprocal cross-reference: this repo's HUF_RELATIONSHIP.json <-> HUF/ai-refresh/MASTER_LINEAGE.json.",
+    "hs": "higgins-decomposition — the deterministic CNT/CNQ instrument; downstream of the RWA engineering origin.",
+    "founding_principle": "The mathematics HUF and Hs formalize was discovered empirically here first, for loudspeakers."
+  },
+  "milestones": {
+    "2024-12": "DADC-DADI diffraction correction (6.02 dB gain simplex) — the compositional discovery",
+    "2026-02": "Higgins Operator H1 self-hosted working paper",
+    "2026-03-11": "GitHub repo launched",
+    "2026-04-16": "Last commit/push to date (Update validate.yml)",
+    "2026-05-08": "RWA-001 lab identity card + LINEAGE.md + README refresh; BTL single-canonical-identity lock",
+    "2026-06-07": "Cowork corpus-authority reconciliation: RWA admin/fast-refresh layer created; 63 uncommitted mirror files flagged for commit; remote behind since 2026-04-16. See AI_REFRESH_2026-06-07_corpus_reconciliation.md."
+  },
+  "current_state_owed": "Peter (via GitHub Desktop): review + commit the 63 uncommitted files (archive/, docs/, concepts/) and push master to GitHub."
+}
