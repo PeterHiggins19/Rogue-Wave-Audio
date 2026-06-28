@@ -6,7 +6,7 @@ This document tells the arc from the RWA side. The HUF-side account lives in the
 
 ## The BTL, and the instrument built because the measurement required it
 
-Rogue Wave Audio has one lab: the Binaural Test Lab (BTL), built by its user in a basement in Markham, Ontario. Purpose-built for loudspeaker measurement and closed-loop validation. The building was the first measurement — the geometry of the room was the boundary condition that every subsequent test had to account for.
+Rogue Wave Audio has one research lab: the Binaural Test Lab (BTL) — a sound-controlled professional laboratory currently sited in Markham, Ontario. Purpose-built for loudspeaker measurement and closed-loop validation. Pre-COVID, the work was conducted at the manufacturing facility of a private Canadian industrial sponsor; the same sponsor maintains a four-laboratory institutional BTL deployment (two facilities in Ottawa, Canada; two in Monaco) for advanced-systems test work. The Markham research lab and the four institutional labs together form the BTL network. In every BTL location the building itself is the first measurement — the geometry of the room is the boundary condition that every subsequent test has to account for.
 
 A rectangular cabinet in a room radiates sound. At low frequencies where the wavelength is much larger than the cabinet, radiation is omnidirectional — full 4π steradian, isotropic, every direction carrying the same share of the energy. As frequency rises and wavelength approaches the cabinet dimensions, the pattern breaks. Sound concentrates forward, sides lose power, back drops off. The composition moves away from uniform.
 
@@ -52,6 +52,7 @@ The instrument here. The framework there. Both public. Both open. Both necessary
 
 ## Where to read next
 
+- [`THE_GROUND_STATE.md`](THE_GROUND_STATE.md) — the headwater: the one formula (6.02 dB apportioned, `f_c = 115/dim`), the ground state as the simplex barycentre, why time is read off the box rather than tacked on, and the full arc to the 3ⁿ index and the verification network.
 - [`HUF_RELATIONSHIP.json`](HUF_RELATIONSHIP.json) — structured cross-reference from RWA concepts to HUF counterparts.
 - [`concepts/btl-lab-study/`](concepts/btl-lab-study/) — the BTL Advanced ODL stereo pair study proposal, the platform where RWA engineering and HUF methodology will be cross-validated.
 - HUF repo `briefings/THE_LINEAGE.md` — the first-person founding narrative from the framework side.

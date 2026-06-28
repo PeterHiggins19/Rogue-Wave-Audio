@@ -23,6 +23,13 @@
   "cross_reference_map": {
     "_purpose": "Each RWA concept/artifact points to its HUF counterpart (or notes the absence). Reading this file tells you what RWA work the HUF repo is building on.",
 
+    "Ground_State_Formula_the_headwater": {
+      "rwa_location": "THE_GROUND_STATE.md (repo root); derivation in data/btl-lab/notes/DIMENSION-APPORTIONED_DIFFRACTION_CORRECTION_3.txt",
+      "rwa_origin_date": "2024-12",
+      "huf_counterpart": "science/methodology/CONFIDENCE_INDEX.md (the 3^n index, far end of the same chain) and the simplex barycentre / shape-magnitude decomposition throughout",
+      "relationship": "The origin document. The one formula -- 6.02 dB = 20 log10(2) apportioned across H,W,D summing to the budget, with f_c = 115/dim -- is a conserved budget on the simplex; the isotropic ground state is the barycentre; time enters through the boundary (f_c forced by wavelength/dimension), not as a tacked-on integral. This is the headwater of the entire arc: ground state + diffraction -> simplex -> H1 -> MC-4/EITT -> CN-TT -> 3^n -> the verification network."
+    },
+
     "DADC_DADC_Dimensional_Apportioned_Diffraction_Correction": {
       "rwa_location": "docs/papers/Dimension-Apportioned_Diffraction_Correction_and_Inference_DADC-DADI.docx",
       "rwa_origin_date": "2024-12-05",
@@ -41,7 +48,7 @@
       "rwa_location": "Implied in the DADC-DADI-ADAC chain documented in docs/papers/",
       "rwa_origin_date": "2025, early-mid",
       "huf_counterpart": "HUF-GOV / HUF-CLS fork documented in briefings/THE_LINEAGE.md and throughout the HUF governance architecture",
-      "relationship": "ADAC is where the engineering instinct to close the feedback loop met the discipline to not close it automatically. HUF-GOV (open-loop, stateless, scientific) and HUF-CLS (closed-loop, stateful, control) are the two paths from that fork. Same error signal, two architectures, a human decision between them."
+      "relationship": "ADAC is where the engineering instinct to close the feedback loop met the discipline to not close it automatically. HUF-GOV (open-loop, stateless, scientific) and HUF-CLS (closed-loop, stateful, control) are the two paths from that fork. Same error signal, two architectures, a researcher decision between them."
     },
 
     "BTL_Binaural_Test_Lab": {

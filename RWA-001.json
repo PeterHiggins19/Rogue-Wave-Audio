@@ -1,0 +1,108 @@
+{
+  "_meta": {
+    "type": "RWA-LAB-IDENTITY-CARD",
+    "version": "1.0",
+    "card_id": "RWA-001",
+    "card_scope": "Lab scientific identity (BTL)",
+    "created": "2026-05-08",
+    "purpose": "Canonical, machine-readable identity card for the Binaural Test Lab (BTL). Locks the single canonical identity of BTL across all repositories and downstream documents. Issued to correct dual-gloss errors that appeared in earlier README transcripts.",
+    "companion_document": {
+      "name": "RWA Corporate Reference v1.0",
+      "scope": "Corporate / legal / licensing identity",
+      "document_id": "RWA-001 (corporate side)",
+      "location_in_repo_constellation": "HUF/archive/legacy-references/machine-readable/RWA_Corporate_Reference_v1.0.json",
+      "relationship": "The two RWA-001 documents are complementary: the corporate reference covers company name, location, contact, licensing, and personnel; this lab identity card covers scientific identity (BTL = Binaural Test Lab single canonical), research outputs (DADC/DADI/ADAC/H₁), and downstream lineage to HUF/Hˢ/CNT/CNQ. Same RWA-001 ID, two facets."
+    }
+  },
+  "lab": {
+    "id": "RWA-001",
+    "canonical_name": "Binaural Test Lab",
+    "abbreviation": "BTL",
+    "abbreviation_meaning": "Binaural Test Lab (single canonical identity, no other gloss)",
+    "explicit_clarification": "BTL is NOT 'Below Threshold Loudspeaker'. Earlier README transcripts that suggested a dual gloss were errors. The canonical identity, established by the lab itself, is Binaural Test Lab and only Binaural Test Lab.",
+    "facility_class": "Sound-controlled professional laboratory with advanced-systems test facilities engineered for real-world four-way active reference monitor development, closed-loop measurement-driven validation, and DADC/DADI/ADAC compositional analysis.",
+    "founded_by": "Peter Higgins",
+    "associated_organisation": "Rogue Wave Audio (RWA)",
+    "purpose": "Loudspeaker measurement, four-way active reference monitoring, closed-loop validation, and the empirical work that produced the simplex/compositional thinking later formalised as the Higgins Operator H1 and the broader Hs/CNT/CNQ framework."
+  },
+  "lab_network": {
+    "_description": "BTL is a laboratory class with multiple deployments. The research/originating lab is operated by Peter Higgins; the design has been deployed institutionally by a private Canadian industrial sponsor as a four-laboratory test network across two countries.",
+    "research_lab": {
+      "id": "BTL-Markham",
+      "operator": "Peter Higgins",
+      "city": "Markham",
+      "province": "Ontario",
+      "country": "Canada",
+      "status": "Currently operational — RWA's primary research and certification facility",
+      "status_note": "Currently sited within a residence as a continuation of work during and after the COVID-19 period. The siting is incidental; the facility itself is fully equipped to professional standards (sound control, calibrated measurement chain, real test instrumentation) regardless of physical location.",
+      "history": "Originally developed at the manufacturing facility of the private Canadian industrial sponsor that funded the project (pre-COVID). Relocation during the pandemic was a forced decision that has remained operationally effective and was retained."
+    },
+    "institutional_deployments": {
+      "_description": "The private Canadian industrial sponsor maintains a four-laboratory deployment of the BTL design for advanced-systems test work.",
+      "sponsor_description": "Private Canadian industrialist who funded the original DADC/DADI/ADAC and BTL design programme; identity withheld here pending the sponsor's preferred public attribution.",
+      "facilities": [
+        {"id": "BTL-Ottawa-1", "city": "Ottawa", "country": "Canada", "function": "Lab testing"},
+        {"id": "BTL-Ottawa-2", "city": "Ottawa", "country": "Canada", "function": "Lab testing"},
+        {"id": "BTL-Monaco-1", "city": "Monaco", "country": "Monaco", "function": "Lab testing"},
+        {"id": "BTL-Monaco-2", "city": "Monaco", "country": "Monaco", "function": "Lab testing"}
+      ],
+      "total_count": 4,
+      "scope": "International institutional deployment (Canada + Monaco), continuously operational."
+    },
+    "framing_note": "When BTL is referenced in academic, regulatory, or technical writing, it should be described as a sound-controlled professional laboratory class with both research (Markham) and institutional (Ottawa, Monaco) deployments. Earlier informal descriptions of the Markham facility as a 'basement lab' captured a true incidental property of its current siting but materially understate the lab's professional character and the broader BTL network. Use 'professional laboratory' or 'sound-controlled laboratory' in formal writing."
+  },
+  "contact_authority": {
+    "_role": "RWA-001 is the canonical CONTACT AUTHORITY for the system (RWA, HUF, Hs). Any JSON or document that needs contact/identity data references THIS card; it does not carry its own copy. Single source of truth for contact/identity, per the document-distribution rule (DOCUMENT_DISTRIBUTION.md).",
+    "gate": "Peter Higgins -- sole commit and contact gate; no AI contacts or commits on its own.",
+    "canonical_public_contact": "PeterHiggins@RogueWaveAudio.com (Rogue Wave Audio business address)",
+    "personal_contact": "WITHHELD -- carrier-filter: personal addresses are not published in the repositories. Route through the business address or Peter directly.",
+    "corporate_companion": "RWA Corporate Reference v1.0 (corporate / legal / licensing / personnel facet of RWA-001) -- see _meta.companion_document.",
+    "how_to_use": "If a file needs contact data, reference 'RWA-001 (RWA repo RWA-001.json) contact_authority' instead of embedding an address. On any conflict about contact/identity, THIS card wins."
+  },
+  "primary_research_outputs": {
+    "DADC": {
+      "name": "Dimension-Apportioned Diffraction Correction",
+      "year": 2024,
+      "summary": "Apportionment of a fixed 6.02 dB cabinet-edge diffraction budget across three cabinet dimensions (width, height, depth). The first natural simplex constraint in the Higgins lineage."
+    },
+    "DADI": {
+      "name": "Dimension-Apportioned Diffraction Inference",
+      "year": 2024,
+      "summary": "Inverse mapping — given measured response, recover the dimensional apportionment."
+    },
+    "ADAC": {
+      "name": "Adaptive Closure",
+      "year": 2025,
+      "summary": "Adaptive closure rule that maintains the simplex constraint under varying conditions. Third member of the DADC family."
+    },
+    "Higgins_Operator_H1": {
+      "name": "Higgins Operator H₁",
+      "year": 2026,
+      "summary": "Nonlinear unity-normalization map on Hilbert space that enforces strict global unity normalization (∑ = 1) across hierarchical regimes while preserving directional coherence. The first formal mathematical generalization of DADC.",
+      "publication": "docs/papers/The_Higgins_Operator_H1_101.pdf"
+    },
+    "BTL_Build_Guide_v1.0": {
+      "name": "Binaural Test Lab — Build Guide v1.0",
+      "summary": "Comprehensive production-quality guide for constructing and calibrating the BTL four-way active reference monitoring system.",
+      "source_builder": "src/builders/build_btl_guide.js"
+    }
+  },
+  "downstream_lineage": {
+    "RWA": "https://github.com/PeterHiggins19/Rogue-Wave-Audio",
+    "HUF": "https://github.com/PeterHiggins19/Higgins-Unity-Framework",
+    "Hs": "https://github.com/PeterHiggins19/higgins-decomposition",
+    "lineage_chain": "DADC → H₁ (Higgins Operator) → HUF (MC-4 + EITT) → Hˢ (Higgins Decomposition) → CNT (Compositional Navigation Tensor) → CNQ (Compositional Navigation Quaternion) → HCI-AUDIO + HCI-ULTRASOUND (applied tiers)",
+    "canonical_lineage_doc_in_Hs": "Hs/HCI-CNT/handbook/ORIGIN_DADC_LINEAGE.md"
+  },
+  "system_specifications": {
+    "monitoring_class": "four-way active reference monitoring",
+    "crossover_frequencies_hz": [430, 1500, 10000],
+    "diffraction_budget_dB": 6.02,
+    "diffraction_apportionment": "across three cabinet dimensions (width, height, depth) — DADC simplex constraint",
+    "drivers": "32W woofer, M15CH002 midrange, Exotic T35 upper-mid, R2904 tweeter (per Build Guide v1.0)",
+    "design_philosophy": "Organic Digital Loudspeakers v2.6 — selecting naturally compatible drivers and applying minimal mathematical correction to maintain transparency and neutrality"
+  },
+  "errata_record": {
+    "2026-05-08": "RWA-001 issued. Corrects dual-gloss error in two RWA-mirror documents (README.md line 17, concepts/btl-lab-study/BTL_Advanced_ODL_Test_Platform.md line 11) where 'Below Threshold Loudspeaker' had appeared as an apparent expansion. Both files updated. Same correction applied in the Hs repo to ORIGIN_DADC_LINEAGE.md, AI_REFRESH_2026-05-08_grok_crosscheck.md, AI_REFRESH_2026-05-08_push24_grok_crosscheck.md, and HS_ADMIN.json."
+  }
+}
